@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODYSCA – Projet 2026-2029</title>
+
+    <!-- Polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================================
+           CHARTE GRAPHIQUE ODYSCA
+           Couleur : #E85D20
+           ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+            color: #222222;
+            background-color: #f9f9f9;
+            line-height: 1.8;
+        }
+
+        .document {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 60px;
+            background-color: #ffffff;
+            box-shadow: 0 0 30px rgba(0,0,0,0.08);
+        }
+
+        /* --- Couleurs --- */
+        .odysca-color { color: #E85D20; }
+        .odysca-bg { background-color: #E85D20; color: #ffffff; }
+        .odysca-border { border-color: #E85D20; }
+
+        /* --- Typographies --- */
+        h1, h2, h3, h4, .title-font {
+            font-family: 'Playfair Display', 'Georgia', serif;
+            font-weight: 700;
+            color: #E85D20;
+        }
+
+        h1 { font-size: 48px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+        h2 { font-size: 36px; border-left: 8px solid #E85D20; padding-left: 25px; margin-top: 60px; margin-bottom: 30px; }
+        h3 { font-size: 28px; margin-top: 40px; margin-bottom: 20px; }
+        h4 { font-size: 22px; margin-top: 30px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 400;
+            font-style: italic;
+            color: #E85D20;
+            margin-top: -8px;
+            margin-bottom: 30px;
+        }
+
+        .festival-font {
+            font-family: 'Dancing Script', cursive;
+            font-size: 22px;
+            color: #E85D20;
+        }
+
+        p, li {
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        /* --- Sauts de page --- */
+        .page-break {
+            page-break-after: always;
+            border-bottom: 2px dashed #eeeeee;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+
+        .page-break:last-child {
+            page-break-after: auto;
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        /* --- En-tête --- */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 25px;
+            border-bottom: 4px solid #E85D20;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo img {
+            height: 80px;
+            width: auto;
+        }
+
+        .header-meta {
+            text-align: right;
+            font-size: 16px;
+            color: #888888;
+            line-height: 1.8;
+        }
+
+        .header-meta strong { color: #E85D20; font-weight: 600; font-size: 18px; }
+
+        /* --- Page de garde --- */
+        .cover {
+            text-align: center;
+            padding: 80px 0 60px 0;
+            border-bottom: 3px solid #f0f0f0;
+            margin-bottom: 60px;
+        }
+
+        .cover .logo-big img {
+            height: 140px;
+            width: auto;
+        }
+
+        .cover h1 { 
+            font-size: 60px; 
+            margin-top: 30px; 
+            margin-bottom: 10px;
+            letter-spacing: 6px;
+        }
+        .cover .subtitle { font-size: 34px; }
+        .cover .tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 22px;
+            color: #666666;
+            margin-top: 15px;
+        }
+        .cover .meta { margin-top: 60px; font-size: 18px; color: #888888; line-height: 2.2; }
+        .cover .festival-tag {
+            font-family: 'Dancing Script', cursive;
+            font-size: 28px;
+            color: #E85D20;
+            margin-top: 25px;
+            letter-spacing: 1px;
+        }
+        .cover .separator {
+            width: 100px;
+            height: 4px;
+            background-color: #E85D20;
+            margin: 25px auto;
+        }
+
+        /* --- Sommaire --- */
+        .toc {
+            margin: 50px 0;
+            padding: 40px 50px;
+            background-color: #FFF9F5;
+            border-radius: 16px;
+            border-left: 8px solid #E85D20;
+        }
+        .toc h2 { border-left: none; padding-left: 0; margin-top: 0; }
+        .toc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px 50px; margin-top: 20px; }
+        .toc-item { font-size: 20px; padding: 8px 0; border-bottom: 1px solid #f0ece9; }
+
+        /* --- Encadrés --- */
+        .highlight-box {
+            background-color: #FFF9F5;
+            border-left: 8px solid #E85D20;
+            padding: 25px 30px;
+            margin: 30px 0;
+            border-radius: 0 12px 12px 0;
+        }
+        .highlight-box strong { color: #E85D20; }
+        .highlight-box p, .highlight-box li { font-size: 20px; }
+
+        .info-box {
+            background-color: #f5f5f5;
+            border-left: 8px solid #888888;
+            padding: 25px 30px;
+            margin: 30px 0;
+            border-radius: 0 12px 12px 0;
+        }
+        .info-box p, .info-box li { font-size: 20px; }
+
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-style: italic;
+            color: #444444;
+            padding: 25px 35px;
+            margin: 30px 0;
+            background-color: #FFF9F5;
+            border-radius: 12px;
+            position: relative;
+        }
+        .quote::before {
+            content: '"';
+            font-size: 70px;
+            color: #E85D20;
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            opacity: 0.3;
+        }
+        .quote-author {
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-size: 18px;
+            font-weight: 600;
+            color: #E85D20;
+            display: block;
+            margin-top: 12px;
+            padding-left: 20px;
+        }
+
+        .quote-small {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-style: italic;
+            color: #555555;
+            padding: 20px 30px;
+            margin: 25px 0;
+            background-color: #FFF9F5;
+            border-radius: 12px;
+            border-left: 6px solid #E85D20;
+        }
+
+        /* --- Tables --- */
+        .table-wrapper { overflow-x: auto; margin: 30px 0; }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            font-size: 18px; 
+            border-radius: 12px; 
+            overflow: hidden; 
+        }
+        th { 
+            background-color: #E85D20; 
+            color: #ffffff; 
+            padding: 16px 20px; 
+            text-align: left; 
+            font-weight: 700; 
+            font-size: 18px; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+        }
+        td { 
+            padding: 14px 20px; 
+            border-bottom: 1px solid #eeeeee; 
+            font-size: 18px; 
+        }
+        tr:nth-child(even) { background-color: #FFF9F5; }
+
+        /* --- Piliers --- */
+        .pillars {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .pillar {
+            background-color: #FFF9F5;
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            border: 2px solid #f0e8e0;
+        }
+
+        .pillar img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .pillar h4 {
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-size: 20px;
+            text-transform: none;
+        }
+        .pillar p {
+            font-size: 17px;
+            color: #666666;
+            margin: 0;
+        }
+
+        /* --- Valeurs --- */
+        .values-grid { 
+            display: grid; 
+            grid-template-columns: repeat(5, 1fr); 
+            gap: 15px; 
+            margin: 25px 0; 
+        }
+        .value-item { 
+            background-color: #FFF9F5; 
+            padding: 18px 12px; 
+            border-radius: 12px; 
+            text-align: center; 
+            font-size: 17px; 
+            font-weight: 600; 
+            color: #E85D20; 
+            border: 1px solid #f0e8e0; 
+            line-height: 1.4;
+        }
+
+        /* --- Grille de principes --- */
+        .principles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 25px 0; }
+        .principle-item { background-color: #FFF9F5; padding: 20px 25px; border-radius: 12px; border-left: 6px solid #E85D20; }
+        .principle-item h4 { margin: 0 0 8px 0; font-size: 20px; text-transform: none; color: #E85D20; }
+        .principle-item p { margin: 0; font-size: 18px; color: #666666; }
+
+        /* --- Schéma axes stratégiques --- */
+        .schema-axes {
+            background-color: #FFF9F5;
+            padding: 30px;
+            border-radius: 16px;
+            border: 2px solid #f0e8e0;
+            margin: 30px 0;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: center;
+        }
+        .schema-axes .axis-box {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 5px;
+            border-radius: 12px;
+            background-color: #ffffff;
+            border: 2px solid #E85D20;
+            min-width: 150px;
+        }
+        .schema-axes .axis-box strong {
+            color: #E85D20;
+            font-size: 18px;
+        }
+        .schema-axes .axis-box span {
+            display: block;
+            font-size: 14px;
+            color: #666666;
+        }
+        .schema-axes .axis-bottom {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 12px;
+            background-color: #ffffff;
+            border: 2px solid #888888;
+        }
+        .schema-axes .axis-bottom strong {
+            color: #333333;
+        }
+
+        /* --- Schéma trajectoire --- */
+        .schema-trajectory {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .schema-trajectory .phase {
+            background-color: #FFF9F5;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #f0e8e0;
+        }
+        .schema-trajectory .phase .year {
+            font-size: 24px;
+            font-weight: 700;
+            color: #E85D20;
+        }
+        .schema-trajectory .phase .title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 10px 0 5px 0;
+        }
+        .schema-trajectory .phase .desc {
+            font-size: 14px;
+            color: #666666;
+        }
+        .schema-trajectory .phase.active {
+            border-color: #E85D20;
+            background-color: #FFF5EF;
+        }
+
+        /* --- Partenaires --- */
+        .partners-grid { display: flex; flex-wrap: wrap; gap: 12px; margin: 25px 0; }
+        .partner-tag { 
+            background-color: #FFF9F5; 
+            padding: 10px 22px; 
+            border-radius: 30px; 
+            font-size: 17px; 
+            border: 1px solid #f0e8e0; 
+            color: #444444; 
+        }
+
+        /* --- Footer --- */
+        .footer { 
+            margin-top: 70px; 
+            padding-top: 30px; 
+            border-top: 3px solid #f0f0f0; 
+            font-size: 15px; 
+            color: #999999; 
+            text-align: center; 
+            line-height: 2; 
+        }
+        .footer .festival-font { font-size: 20px; }
+
+        /* --- Méthodologie --- */
+        .methodology {
+            background-color: #f8f8f8;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 17px;
+            color: #555555;
+            margin: 15px 0;
+            border-left: 4px solid #888888;
+        }
+        .methodology strong {
+            color: #E85D20;
+        }
+
+        /* --- Impression --- */
+        @media print {
+            body {
+                background-color: white;
+                margin: 2cm 1.5cm;
+            }
+            .document {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+                margin: 0;
+            }
+            .page-break {
+                page-break-after: always;
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            .page-break:last-child {
+                page-break-after: auto;
+            }
+            .highlight-box, .info-box, .quote, .quote-small, .table-wrapper, .pillars {
+                page-break-inside: avoid;
+            }
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+            .cover {
+                padding: 40px 0 30px 0;
+            }
+            .cover h1 {
+                font-size: 48px;
+            }
+            .cover .logo-big img {
+                height: 100px;
+            }
+            .logo img {
+                height: 60px;
+            }
+            .toc {
+                padding: 25px 30px;
+            }
+            table {
+                font-size: 15px;
+            }
+            th, td {
+                padding: 10px 14px;
+            }
+            .footer {
+                font-size: 12px;
+                margin-top: 30px;
+                padding-top: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .document { padding: 25px; }
+            .header { flex-direction: column; align-items: center; text-align: center; gap: 15px; }
+            .header-meta { text-align: center; }
+            .cover h1 { font-size: 38px; }
+            .pillars { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: 1fr 1fr; }
+            .toc-grid { grid-template-columns: 1fr; }
+            .principles-grid { grid-template-columns: 1fr; }
+            .schema-trajectory { grid-template-columns: 1fr; }
+            h1 { font-size: 34px; }
+            h2 { font-size: 28px; }
+            h3 { font-size: 22px; }
+            p, li { font-size: 18px; }
+            table { font-size: 15px; }
+            th, td { font-size: 15px; padding: 10px 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="document">
+
+    <!-- ============================================================
+         PAGE 1 : PAGE DE GARDE
+         ============================================================ -->
+    <div class="page-break">
+
+        <div class="header">
+            <div class="logo">
+                <img src="ODYSCA-LOGO 50%.jpg" alt="Logo ODYSCA">
+            </div>
+            <div class="header-meta">
+                <strong>Projet 2026-2029</strong><br/>
+                Dispositif Local d'Accompagnement<br/>
+                Diagnostic et Plan d'Action<br/>
+                <span class="festival-font">✦ Structuration et Développement d'un Projet Cirque Territorial ✦</span>
+            </div>
+        </div>
+
+        <div class="cover">
+            <div class="logo-big">
+                <img src="ODYSCA-LOGO 50%.jpg" alt="Logo ODYSCA">
+            </div>
+
+            <h1>Restitution du DLA</h1>
+            <div class="subtitle">Projet 2026-2029</div>
+            <p class="tagline">Vers une nouvelle Scène Conventionnée d'Intérêt National dans les Landes</p>
+            <p class="tagline">« Art & Création »</p>
+
+            <div class="separator"></div>
+
+            <div class="meta">
+                <strong>24 Août 2026</strong><br/>
+                COPIL
+            </div>
+
+            <div class="festival-tag" style="font-size:20px; margin-top:20px;">✦ Biscarrosse, dans le cadre du festival de Cirque "Rue des Etoiles" ✦</div>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 2 : SOMMAIRE
+         ============================================================ -->
+    <div class="page-break">
+
+        <div class="toc">
+            <h2>SOMMAIRE</h2>
+            <div class="toc-grid">
+                <div class="toc-item">Introduction</div>
+                <div class="toc-item">Soutien à la création : des résidences au cœur de notre identité</div>
+                <div class="toc-item">Diffusion : une programmation exigeante au service du territoire</div>
+                <div class="toc-item">Médiation, éducation artistique et formation : le nouveau moteur du projet</div>
+                <div class="toc-item">L'équipe restreinte : un frein structurel au développement</div>
+                <div class="toc-item">Le bénévolat en crise : un patrimoine à préserver, un modèle à réinventer</div>
+                <div class="toc-item">Les ateliers cirque amateurs : un potentiel sous-exploité à réactiver</div>
+                <div class="toc-item">Gouvernance : une évolution nécessaire pour accompagner le développement</div>
+                <div class="toc-item">Bilan et conclusion</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 3 : INTRODUCTION (DÉBUT)
+         ============================================================ -->
+    <div class="page-break">
+
+        <h2>Introduction</h2>
+
+        <div class="highlight-box">
+            <p><strong>ODYSCA</strong>, héritière de 40 ans d'engagement culturel sur le territoire (1985-2025), porte aujourd'hui un projet structurant : devenir une <strong>Scène Conventionnée d'Intérêt National (SCIN) « Arts & Création »</strong> dédiée au cirque de création.</p>
+        </div>
+
+        <p>En 2021, la Ville de Biscarrosse a confié à l'Université Bordeaux Montaigne (UBiC) une étude d'opportunité pour le déploiement d'un Pôle Cirque permanent. Cette étude, restituée en 2022, a confirmé la faisabilité et la pertinence du projet. Elle a également mis en lumière la nécessité d'accompagner l'association CRABB (devenue ODYSCA) dans l'évolution de sa gouvernance et de son modèle.</p>
+
+        <p>Le présent DLA (Dispositif Local d'Accompagnement) s'inscrit dans cette continuité. Il a pour objectifs de :</p>
+
+        <ul>
+            <li><strong>Consolider l'argumentaire</strong> en faveur du projet pour faciliter sa reconnaissance officielle</li>
+            <li><strong>Proposer une évolution de la gouvernance</strong> afin d'améliorer l'intégration des élus locaux</li>
+            <li><strong>Anticiper les besoins futurs</strong> en matière de ressources humaines</li>
+        </ul>
+
+        <h3>Pourquoi ce projet est essentiel pour le territoire</h3>
+
+        <p>La ville de Biscarrosse et la Communauté de Communes des Grands Lacs connaissent une dynamique démographique et touristique forte, mais également un vieillissement de la population et un risque d'isolement des jeunes. Dans ce contexte, ODYSCA apporte une réponse concrète : un lieu de vie, de pratique et de rencontre, ouvert à toutes et tous.</p>
+
+        <p>La vocation du cirque de création n'est pas seulement dédiée au spectacle : c'est aussi un outil d'émancipation, de lien social et de construction citoyenne. Il permet aux enfants de s'approprier leur corps, aux jeunes de développer confiance et esprit d'équipe, aux adultes et séniors de rester en lien avec la vie culturelle du territoire.</p>
+
+        <p>En devenant Scène Conventionnée d'Intérêt National, ODYSCA ne cherche pas un label pour lui-même, mais un levier pour amplifier son impact social et culturel au service des habitants d'un territoire plus large.</p>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 4 : INTRODUCTION (SUITE) & DIAGNOSTIC
+         ============================================================ -->
+    <div class="page-break">
+
+        <h3>Les trois piliers du projet</h3>
+
+        <div class="pillars">
+            <div class="pillar">
+                <img src="Pastille1.jpg" alt="Soutien à la création">
+                <h4>Soutien à la création</h4>
+                <p>Soutien à la création artistique dans l'intérêt général</p>
+            </div>
+            <div class="pillar">
+                <img src="Pastille2.jpg" alt="Diffusion">
+                <h4>Diffusion</h4>
+                <p>Production et diffusion d'œuvres vivantes</p>
+            </div>
+            <div class="pillar">
+                <img src="Pastille3.jpg" alt="Éducation Artistique et Culturelle">
+                <h4>Médiation, éducation et formation</h4>
+                <p>Éveil, éducation et formation artistique de tous les publics</p>
+            </div>
+        </div>
+
+        <h3>Nos valeurs fondamentales</h3>
+
+        <div class="values-grid">
+            <div class="value-item">✦ Favoriser l'émancipation individuelle et collective</div>
+            <div class="value-item">✦ Encourager de nouvelles formes de démocratie participative</div>
+            <div class="value-item">✦ Promouvoir le partage des savoirs</div>
+            <div class="value-item">✦ Cultiver le lien social</div>
+            <div class="value-item">✦ Stimuler l'esprit critique et le libre arbitre</div>
+        </div>
+
+        <div class="schema-axes">
+            <p style="font-size:22px; font-weight:700; color:#E85D20; margin-bottom:15px;">✦ Les 5 axes stratégiques ✦</p>
+            <div>
+                <span class="axis-box"><strong>Création</strong><span>Résidences<br/>Artistes associés</span></span>
+                <span class="axis-box"><strong>Diffusion</strong><span>Spectacles<br/>Festival</span></span>
+                <span class="axis-box"><strong>EAC</strong><span>Médiation<br/>Ateliers</span></span>
+                <span class="axis-box"><strong>Formation</strong><span>Amateurs<br/>Professionnels</span></span>
+                <span class="axis-box"><strong>International</strong><span>Coopérations<br/>Erasmus+</span></span>
+            </div>
+            <div class="axis-bottom">
+                <strong>Gouvernance & Ressources humaines</strong><br/>
+                <span style="font-size:14px; color:#666666;">Évolution statuts – Conseil de maison – Renforcement RH – Convention pluriannuelle</span>
+            </div>
+        </div>
+
+        <h3>Diagnostic – Forces et fragilités</h3>
+
+        <p><em>Le diagnostic qui suit s'appuie sur l'étude d'opportunité réalisée par l'Université Bordeaux Montaigne (UBiC) en 2022 à la demande de la Ville de Biscarrosse.</em></p>
+
+        <h4>1. Le territoire biscarrossais</h4>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:25px; margin:25px 0;">
+            <div style="background:#f5f5f5; padding:25px; border-radius:16px;">
+                <h4 style="margin-top:0; color:#333333; text-transform:none; font-size:20px;">Forces du territoire</h4>
+                <ul style="list-style:none; padding:0; margin:0;">
+                    <li style="padding:8px 0; border-bottom:1px solid #e0e0e0; font-size:18px;">✓ Croissance démographique continue (×4,5 depuis 1962)</li>
+                    <li style="padding:8px 0; border-bottom:1px solid #e0e0e0; font-size:18px;">✓ Territoire attractif (lacs, forêt, océan)</li>
+                    <li style="padding:8px 0; border-bottom:1px solid #e0e0e0; font-size:18px;">✓ Bon niveau d'équipements culturels</li>
+                    <li style="padding:8px 0; font-size:18px;">✓ Volonté politique forte</li>
+                </ul>
+            </div>
+            <div style="background:#FFF9F5; padding:25px; border-radius:16px; border:2px solid #E85D20;">
+                <h4 style="margin-top:0; color:#E85D20; text-transform:none; font-size:20px;">Fragilités du territoire</h4>
+                <ul style="list-style:none; padding:0; margin:0;">
+                    <li style="padding:8px 0; border-bottom:1px solid #f0e8e0; font-size:18px;">✕ Population vieillissante (39 % de + de 60 ans)</li>
+                    <li style="padding:8px 0; border-bottom:1px solid #f0e8e0; font-size:18px;">✕ Faible représentation des jeunes (-8 % depuis 2008)</li>
+                    <li style="padding:8px 0; border-bottom:1px solid #f0e8e0; font-size:18px;">✕ Difficultés de logement pour les jeunes couples</li>
+                    <li style="padding:8px 0; font-size:18px;">✕ Saisonnalité touristique marquée</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 5 : FORCES & FRAGILITÉS
+         ============================================================ -->
+    <div class="page-break">
+
+        <h4>2. Forces et fragilités d'ODYSCA</h4>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th style="width:50%;">Forces</th><th style="width:50%;">Fragilités</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Plus de 40 ans d'engagement et de légitimité</td><td>Équipe restreinte (1,69 ETP) au regard des missions</td></tr>
+                    <tr><td>Spécialisation reconnue pour le cirque de création</td><td>Absence de postes dédiés à la médiation et la communication</td></tr>
+                    <tr><td>Festival "Rue des Étoiles" : notoriété régionale et nationale</td><td>Ateliers cirque amateurs qui peinent à décoller</td></tr>
+                    <tr><td>Partenariats solides (Ville, Département, Région, Etat)</td><td>Fréquentation en légère érosion (88 payants/spectacle)</td></tr>
+                    <tr><td>Reconnaissance nationale (Territoires de Cirque, ONDA, PNAC)</td><td>Vieillissement du vivier bénévole</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>3. Opportunités et menaces</h4>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:25px; margin:25px 0;">
+            <div style="background:#E8F5E9; padding:25px; border-radius:16px;">
+                <h4 style="margin-top:0; color:#2E7D32; text-transform:none; font-size:20px;">Opportunités</h4>
+                <ul style="list-style:none; padding:0; margin:0;">
+                    <li style="padding:6px 0; font-size:18px;">✓ Label SCIN visé pour 2028</li>
+                    <li style="padding:6px 0; font-size:18px;">✓ Chapiteau à l'année (site Triscos)</li>
+                    <li style="padding:6px 0; font-size:18px;">✓ Dynamique CTG et FPT en construction</li>
+                    <li style="padding:6px 0; font-size:18px;">✓ Coopérations régionales à renforcer</li>
+                    <li style="padding:6px 0; font-size:18px;">✓ Volonté politique locale affirmée</li>
+                </ul>
+            </div>
+            <div style="background:#FFEBEE; padding:25px; border-radius:16px;">
+                <h4 style="margin-top:0; color:#C62828; text-transform:none; font-size:20px;">Menaces</h4>
+                <ul style="list-style:none; padding:0; margin:0;">
+                    <li style="padding:6px 0; font-size:18px;">✕ Raréfaction des financements publics</li>
+                    <li style="padding:6px 0; font-size:18px;">✕ Équipe sous-dimensionnée face à l'élargissement des missions</li>
+                    <li style="padding:6px 0; font-size:18px;">✕ Equilibre à trouver avec la programmation municipale</li>
+                    <li style="padding:6px 0; font-size:18px;">✕ Risque de gentrification et d'isolement des jeunes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>Les trois préalables identifiés par l'UBIC :</strong></p>
+            <ol style="margin:10px 0 0 20px; font-size:20px;">
+                <li><strong>Pour ODYSCA :</strong> clarifier et structurer son projet associatif autour du cirque</li>
+                <li><strong>Pour les partenaires publics :</strong> formaliser la coopération de manière pérenne</li>
+                <li><strong>Pour la Ville de Biscarrosse :</strong> inscrire ce projet dans son aménagement urbain au service des habitants</li>
+            </ol>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 6 : ODYSCA EN QUELQUES DATES
+         ============================================================ -->
+    <div class="page-break">
+
+        <h3>ODYSCA en quelques dates</h3>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Année</th><th>Événement clé</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1985</td><td>Naissance du CRABB en substitution du foyer des jeunes</td></tr>
+                    <tr><td>1988</td><td>1er festival (Jazz)</td></tr>
+                    <tr><td>1990</td><td>Lancement de la première saison culturelle : <em>La Passion du Spectacle</em></td></tr>
+                    <tr><td>1993</td><td>Concert de Santana au Stade de Biscarrosse</td></tr>
+                    <tr><td>1997/98</td><td>Naissance du festival <em>Rue des Étoiles</em> (cirque et danse)</td></tr>
+                    <tr><td>2001</td><td>Obtention du label « Scène Départementale »</td></tr>
+                    <tr><td>2003</td><td>Convention avec Sanguinet</td></tr>
+                    <tr><td>2006</td><td><em>Rue des Étoiles</em> devient 100 % cirque contemporain</td></tr>
+                    <tr><td>2011</td><td>Adhésion au réseau national « Territoires de Cirque »</td></tr>
+                    <tr><td>2012</td><td>Ouverture de la salle de l'Arcanson</td></tr>
+                    <tr><td>2017</td><td>Recentrage du projet artistique sur le cirque contemporain</td></tr>
+                    <tr><td>2019</td><td>Conventionnement DRAC Nouvelle-Aquitaine</td></tr>
+                    <tr><td>2023</td><td>Le CRABB devient <strong>ODYSCA</strong></td></tr>
+                    <tr><td>2025</td><td>Rachat du chapiteau de Bègles par la Ville</td></tr>
+                    <tr><td>2026</td><td>Année de la présente étude DLA</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 7 : SOUTIEN À LA CRÉATION
+         ============================================================ -->
+    <div class="page-break">
+
+        <h2>Soutien à la création : des résidences au cœur de notre identité</h2>
+
+        <h3>Un engagement déjà structurant</h3>
+
+        <p>Le soutien à la création constitue depuis toujours l'un des trois piliers d'ODYSCA. En 2023, plus de <strong>20 000 €</strong> ont été investis dans l'accueil de compagnies en résidence – un effort déjà notable au regard du budget global de la structure (~350 K€).</p>
+
+        <p>Deux formats d'accueil coexistent et seront maintenus :</p>
+
+        <ul>
+            <li><strong>Les résidences coproduites</strong>, qui engagent ODYSCA dans le développement artistique d'une œuvre aux côtés de la compagnie</li>
+            <li><strong>Les mises à disposition</strong>, plus légères, qui permettent d'accueillir davantage de compagnies avec un accompagnement technique et logistique</li>
+        </ul>
+
+        <h3>Une progression volontairement mesurée</h3>
+
+        <div class="methodology">
+            <strong>Méthodologie :</strong> l'objectif de 60/70 jours de résidence en 2026-2027 correspond au maintien du volume actuel (4 résidences de 15 jours en moyenne). La progression vers 70/80 jours en 2029 repose sur l'arrivée du chapiteau, qui permet d'accueillir des résidences plus longues (jusqu'à 20 jours) et des compagnies avec leur propre chapiteau.
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Jours de résidence</th><th>2026</th><th>2027</th><th>2028</th><th>2029</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Volume annuel</td><td>60/70</td><td>60/70</td><td>70/80</td><td>70/80</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-box">
+            <p><strong>L'arrivée du chapiteau change la nature de l'accueil :</strong> les compagnies bénéficient désormais d'un espace de répétition et de résidence "haut de gamme", disponible toute l'année, ce qui constitue un argument fort auprès des réseaux régionaux et nationaux – sans que cela ne se traduise mécaniquement par une explosion du volume, mais plutôt par une amélioration de la qualité d'accueil.</p>
+        </div>
+
+        <h3>Le modèle des artistes associés : un gagnant-gagnant</h3>
+
+        <p>Trois artistes associées structurent le compagnonnage artistique d'ODYSCA : <strong>Anna</strong> (acro-danse), <strong>Lolita</strong> (respiration, acrobatie) et <strong>Antoine</strong> (voltige aérienne, également directeur technique). Ce compagnonnage permet à la fois de soutenir leur parcours de création et de faire bénéficier les ateliers amateurs et les formations professionnelles de leur expertise technique – une mutualisation qui optimise des moyens humains par ailleurs contraints.</p>
+
+        <h4>Objectifs et indicateurs</h4>
+
+        <ul>
+            <li>Stabiliser à 60 jours de résidence/an en 2026-2027 (phase d'installation du chapiteau)</li>
+            <li>Reprendre une trajectoire de croissance dès 2028 (entre 70 et 80 jours en 2029)</li>
+            <li>Maintenir les deux formats d'accueil (coproduction / mise à disposition) dans un équilibre à consolider</li>
+            <li>Formaliser le modèle économique des artistes associés dans le cadre de la future convention d'objectifs et de moyens</li>
+        </ul>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 8 : DIFFUSION
+         ============================================================ -->
+    <div class="page-break">
+
+        <h2>Diffusion : une programmation exigeante au service du territoire</h2>
+
+        <p>ODYSCA inscrit son action dans une démarche exigeante, en phase avec les grandes structures comme les Pôles Nationaux des Arts du Cirque. Fidèle à son identité, l'association porte une attention particulière aux nouvelles formes de cirque et au soutien des jeunes compagnies, affirmant ainsi son rôle dans l'émergence artistique.</p>
+
+        <!-- Image du chapiteau -->
+        <div style="text-align:center; margin:30px 0;">
+            <img src="Chap.jpg" alt="Chapiteau Triscos" 
+                 style="width:100%; max-width:600px; border-radius:16px; box-shadow:0 6px 30px rgba(0,0,0,0.12);">
+            <p style="font-size:16px; color:#888888; margin-top:10px; font-style:italic;">
+                Le chapiteau Triscos – futur lieu de vie et de création
+            </p>
+        </div>
+
+        <h3>Une programmation accessible à tous</h3>
+
+        <p>La programmation s'adresse à tous les publics, avec une attention particulière portée aux personnes éloignées de l'offre culturelle, afin de favoriser l'accès à l'art pour tous. Ceci s'exprime par une billetterie et des tarifs accessibles toute l'année, ainsi que par un certain nombre de propositions gratuites.</p>
+
+        <h3>Une diffusion maîtrisée et qualitative</h3>
+
+        <p>ODYSCA fait le choix d'une diffusion maîtrisée et qualitative, recentrée sur :</p>
+
+        <ul>
+            <li><strong>La programmation à l'Arcanson :</strong> maintien d'une saison de spectacles en salle (de 4 à 6 propositions par an)</li>
+            <li><strong>Les spectacles sous chapiteau :</strong> 4 à 6 propositions par an, en lien avec les résidences et la saison estivale</li>
+            <li><strong>Les formes en espace public :</strong> animations en centre-ville et sur le territoire intercommunal, en lien avec les partenaires locaux</li>
+        </ul>
+
+        <div class="info-box">
+            <p><strong>Objectif 2028 (SCIN) :</strong> développer les actions de diffusion sur la commune et l'intercommunalité, en augmentant sensiblement le volume des spectacles par le biais des séries. Ceci afin de contrôler l'économie de ce volet tout en renforçant leur ancrage territorial et leur rayonnement sur la Communauté des Communes.</p>
+        </div>
+
+        <h3>Le festival "Rue des Étoiles" : un marqueur identitaire</h3>
+
+        <div class="highlight-box">
+            <p><span class="festival-font" style="font-size:24px;">✦ Rue des Étoiles ✦</span><br/>
+            L'événement "Rue des Étoiles", organisé en août, marque une ouverture au territoire en sortant des murs de l'Arcanson et en favorisant le dialogue entre les disciplines circassiennes. Il constitue le temps fort de la saison et un outil de rayonnement pour la commune et le territoire.</p>
+        </div>
+
+        <p><strong>Édition 2026 :</strong> 4 jours, 8 compagnies programmées, sur plusieurs lieux (chapiteau Latécoère, Musée des Hydravions, Musée des Traditions, Bourg, Lac Latécoère).</p>
+
+        <p><strong>Objectifs du festival :</strong></p>
+        <ul>
+            <li>Maintenir un événement de qualité, accessible à tous</li>
+            <li>Offrir une vitrine aux compagnies accueillies en résidence</li>
+            <li>Créer du lien social et animer le territoire en période estivale</li>
+            <li>Mobiliser les bénévoles et les partenaires locaux</li>
+        </ul>
+
+        <h3>Une saison culturelle partenariale</h3>
+
+        <p>ODYSCA inscrit sa programmation dans une logique partenariale avec :</p>
+        <ul>
+            <li>La Ville de Biscarrosse (partage de l'Arcanson)</li>
+            <li>Les communes de Sanguinet, Ychoux et Parentis-en-Born</li>
+            <li>Les réseaux professionnels (Territoires de Cirque, OARA, ONDA)</li>
+        </ul>
+        <p>Cette logique de réseau permet de mutualiser les moyens et de proposer une offre culturelle cohérente sur l'ensemble du territoire.</p>
+
+        <h3>À étudier : l'itinérance du chapiteau (perspective 2028-2029)</h3>
+
+        <p>Une fois le modèle stabilisé sur site, ODYSCA ambitionne de développer des tournées dans le Nord des Landes et au-delà, en s'appuyant sur l'itinérance du chapiteau et sur l'adhésion de la communauté des communes à ce projet. Cette itinérance s'articule avec les dispositifs régionaux auxquels l'association participe déjà (Processus Cirque, Cirque en Force, Tremplin Cirque).</p>
+
+        <h4>Objectifs et indicateurs</h4>
+
+        <div class="methodology">
+            <strong>Méthodologie :</strong> le passage de 10 à 15 spectacles/an est conditionné par l'augmentation de la jauge (450 places sous chapiteau contre 300 à l'Arcanson) et par le développement de séries (2 à 3 représentations par spectacle). La marge artistique supplémentaire de 32 700 € correspond au coût moyen d'un spectacle supplémentaire (cachets, défraiements, location technique).
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Indicateur</th><th>2026</th><th>2027</th><th>2028</th><th>2029</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Nombre de spectacles/an</td><td>~10</td><td>~10-11</td><td>12-13</td><td>15 (objectif SCIN)</td></tr>
+                    <tr><td>Fréquentation moyenne/spectacle</td><td>stabilisation</td><td>stabilisation</td><td>croissance</td><td>croissance</td></tr>
+                    <tr><td>Spectateurs Rue des Étoiles</td><td>stable</td><td>stable</td><td>croissance</td><td>croissance</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Focus financier et stratégie de financement</h4>
+
+        <div class="info-box">
+            <p>Le passage de 10 à 15 spectacles/an nécessitera, à terme, une marge artistique supplémentaire évaluée à environ <strong>32 700 €</strong>. Cette recherche de financement complémentaire (DRAC, Ville, Département, Région, mécénat, billetterie) n'est engagée qu'à partir de 2028, une fois les besoins prioritaires de médiation et de résidences couverts.</p>
+        </div>
+
+        <p><strong>Stratégie financière et robustesse du projet</strong></p>
+
+        <p>ODYSCA a construit son plan de financement sur des hypothèses volontairement prudentes. La convention pluriannuelle d'objectifs et de moyens avec les partenaires publics (Ville, Département, Région, EPCI, DRAC) est le premier levier de sécurisation. Elle garantit une visibilité sur les financements publics pour la durée du mandat.</p>
+
+        <p>Face à un éventuel retrait de l'un des partenaires, trois leviers d'adaptation sont identifiés :</p>
+
+        <ul>
+            <li><strong>Réaffectation des marges de manœuvre internes :</strong> les recettes propres (billetterie, ateliers, formation) sont en progression régulière. Une augmentation de 10 % des recettes propres génère environ 20 000 € de marge supplémentaire.</li>
+            <li><strong>Développement du mécénat et des fondations :</strong> le mécénat local est encore sous-exploité. Une campagne ciblée auprès des entreprises du territoire et des fondations culturelles pourrait apporter 10 000 € supplémentaires par an.</li>
+            <li><strong>Redéploiement des dépenses :</strong> l'internalisation des actions EAC et le recrutement du médiateur permettent un déplacement des dépenses vers une meilleure maîtrise des coûts.</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p><strong>Les solutions à trouver sont collectives.</strong> ODYSCA ne porte pas seule ce projet : il est soutenu par la Ville, le Département, la Région et l'État. Chaque partenaire est invité à s'engager dans le cadre de la convention pluriannuelle, en fonction de ses priorités et de ses capacités.</p>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 9 : MÉDIATION
+         ============================================================ -->
+    <div class="page-break">
+
+        <h2>Médiation, éducation artistique et formation : le nouveau moteur du projet</h2>
+
+        <p>C'est ici que se concentre l'essentiel de l'ambition 2026-2029 : l'implantation du chapiteau à l'année transforme la médiation et la formation, jusqu'ici secondaires, en <strong>véritable colonne vertébrale du projet ODYSCA</strong>.</p>
+
+        <h3>Un héritage à reconquérir</h3>
+
+        <p>ODYSCA a connu, dans les années 2000, une première expérience de poste de médiateur dédié — un savoir-faire aujourd'hui à reconstruire, mais qui constitue un point d'appui historique et une légitimité déjà établie auprès des écoles et des familles du territoire.</p>
+
+        <h3>Une dynamique déjà réelle, à amplifier fortement</h3>
+
+        <p>En 2023, plus de <strong>2 200 enfants et jeunes</strong> ont été touchés par les actions d'éducation artistique et culturelle d'ODYSCA — écoles, collèges, lycées, crèches, EHPAD, Espace Senior. Le chapiteau permet de passer d'une action dispersée à une action structurée autour d'un lieu identifié :</p>
+
+        <ul>
+            <li>Ateliers cirque à l'année (enfants, ados, adultes)</li>
+            <li>Stages pendant les vacances scolaires</li>
+            <li>Accueil de groupes scolaires à la demi-journée ou à la journée</li>
+            <li>Accueil d'établissements médico-sociaux (IMPRO, ESAT, EHPAD)</li>
+            <li>Mise en place d'un <strong>"Pôle Jeunes"</strong> cirque sur le temps périscolaire</li>
+        </ul>
+
+        <h3>Une trajectoire claire de développement</h3>
+
+        <div class="methodology">
+            <strong>Méthodologie :</strong> l'objectif de 40 jours d'actions EAC en 2029 repose sur le recrutement d'un médiateur à temps plein. Aujourd'hui, chaque action EAC est externalisée (400-600 €/jour). Avec un salarié dédié, le coût unitaire diminue (175 €/h d'intervention) et le volume peut être multiplié par 4 sans augmentation proportionnelle des dépenses.
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Jours d'actions EAC/an</th><th>2026</th><th>2027</th><th>2028</th><th>2029</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Volume annuel</td><td>9</td><td>20</td><td>30</td><td>40</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-box">
+            <p><strong>Le levier de cette montée en charge est unique :</strong> le recrutement d'un·e médiateur·trice / animateur·trice cirque à temps plein, qui permet d'internaliser des compétences aujourd'hui achetées en prestation (Komono Circus, freelances) et donc de réduire le coût unitaire de chaque action tout en en démultipliant le volume.</p>
+        </div>
+
+        <h3>Articulation avec les politiques publiques</h3>
+
+        <p>Ce développement s'appuie sur trois leviers institutionnels :</p>
+
+        <ul>
+            <li>La <strong>CTG</strong> (Contrat Territorial Global) signée avec l'intercommunalité des Grands Lacs</li>
+            <li>Le <strong>PEDT</strong> (Projet Éducatif de Territoire), en construction</li>
+            <li>Le futur <strong>Contrat Territorial EAC</strong></li>
+        </ul>
+
+        <h4>Objectifs et indicateurs</h4>
+
+        <ul>
+            <li>Passer de 9 à 40 jours d'actions EAC entre 2025 et 2029</li>
+            <li>Recruter le/la médiateur·trice cirque dès 2027 (financement FONJEP en cours d'instruction)</li>
+            <li>Signer le Contrat Territorial EAC et finaliser le PEDT sur la période</li>
+            <li>Consolider le partenariat avec Komono Circus, PEP 40 et les établissements scolaires/médico-sociaux du territoire</li>
+        </ul>
+
+        <h3>La formation : un nouveau pilier à développer</h3>
+
+        <p><strong>Pour les amateurs :</strong></p>
+        <ul>
+            <li>Ateliers hebdomadaires (théâtre à Biscarrosse et Sanguinet, cirque à Biscarrosse)</li>
+            <li>Stages pendant les vacances scolaires</li>
+        </ul>
+
+        <p><strong>Pour les professionnels et les établissements :</strong></p>
+        <ul>
+            <li>Modules cirque intégrés à des formations existantes (santé, social, éducation)</li>
+            <li>Stages techniques encadrés par les artistes associés</li>
+            <li>Accueil de modules de formation diplômants (BPJEPS)</li>
+            <li>Masterclasses ponctuelles</li>
+        </ul>
+
+        <p><strong>Pour les entreprises :</strong></p>
+        <ul>
+            <li>Team building et formations sur mesure</li>
+        </ul>
+
+        <h3>Un modèle économique à construire progressivement</h3>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Marge générée par la formation</th><th>2026</th><th>2027</th><th>2028</th><th>2029</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Volume annuel</td><td>+2 500 €</td><td>+4 000 €</td><td>+6 000 €</td><td>à préciser</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Objectifs et indicateurs</h4>
+
+        <ul>
+            <li>Construire une offre de formation lisible pour les trois publics d'ici 2027</li>
+            <li>Atteindre une marge nette de 6 000 €/an dès 2028</li>
+            <li>Formaliser au moins un partenariat de formation diplômante d'ici 2029</li>
+        </ul>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 10 : L'ÉQUIPE RESTREINTE
+         ============================================================ -->
+    <div class="page-break">
+
+        <h2>L'équipe restreinte : un frein structurel au développement</h2>
+
+        <h3>Le constat chiffré</h3>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Indicateur</th><th>Situation actuelle</th><th>Référence sectorielle</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ETP permanents</td><td>1,69 (Direction + secrétariat/compta à temps partiel)</td><td>4-6 ETP pour une scène conventionnée de taille comparable</td></tr>
+                    <tr><td>Ratio ETP / budget</td><td>1 ETP pour ~207 K€ de budget</td><td>1 ETP pour ~120-150 K€ en moyenne associative</td></tr>
+                    <tr><td>Postes vacants structurels</td><td>Médiation, communication, technique</td><td>Absence chronique depuis +5 ans</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Les conséquences opérationnelles</h3>
+
+        <p><strong>Surcharge et multitâche forcé.</strong> La direction assume aujourd'hui des missions qui dépassent largement son périmètre : montage de dossiers de subvention, coordination technique du chapiteau, relais avec les écoles, gestion des résidences, représentation institutionnelle. Cette fragmentation réduit le temps disponible pour la prospection artistique et la construction de partenariats stratégiques — deux leviers pourtant essentiels à la labellisation SCIN.</p>
+
+        <p><strong>Dépendance aux prestataires externes.</strong> L'absence de poste dédié à la médiation oblige ODYSCA à externaliser l'essentiel de ses actions EAC (Komono Circus, freelances). Coût moyen d'une journée d'intervention externalisée : 400-600 € (hors frais de déplacement). Avec un médiateur salarié, le coût horaire d'intervention directe est d'environ 175 €, ce qui permet une meilleure maîtrise du coût unitaire.</p>
+
+        <p><strong>Vulnérabilité aux aléas.</strong> Avec 1,69 ETP, l'absence d'un seul salarié (congé longue maladie, départ) paralyse une ou plusieurs missions. La structure n'a pas de « matelas » organisationnel.</p>
+
+        <h3>L'enjeu de la labellisation SCIN</h3>
+
+        <p>Le cahier des charges SCIN « Arts & Création » exige une capacité d'ingénierie artistique et culturelle démontrable. Or, l'équipe actuelle peine à dégager du temps pour :</p>
+
+        <ul>
+            <li>La veille artistique nationale et internationale</li>
+            <li>L'accompagnement structuré des compagnies en résidence</li>
+            <li>La construction de projets de coopération territoriale</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p>« L'équipe restreinte d'ODYSCA (1,69 ETP) constitue aujourd'hui le principal goulot d'étranglement du projet. Alors que les missions se sont élargies — passage d'une programmation saisonnière à une activité à l'année, développement de l'EAC, gestion d'un chapiteau permanent —, les effectifs sont restés stables depuis 2019. »</p>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 11 : LE BÉNÉVOLAT EN CRISE
+         ============================================================ -->
+    <div class="page-break">
+
+        <h2>Le bénévolat en crise : un patrimoine à préserver, un modèle à réinventer</h2>
+
+        <h3>Le diagnostic</h3>
+
+        <p><strong>Vieillissement du vivier.</strong> Le diagnostic UBIC (2022) le soulignait déjà : le renouvellement des générations de bénévoles ne compense pas les départs. Profil type du bénévole actif : 55-70 ans, engagé depuis 10 à 20 ans, souvent retraité avec une disponibilité saisonnière. Les jeunes actifs (25-40 ans), pourtant cibles privilégiées pour l'ancrage local, sont sous-représentés.</p>
+
+        <p><strong>Fatigue et désengagement progressif.</strong> Les bénévoles historiques portent une charge technique et logistique croissante. Avec l'installation permanente du chapiteau, ces tâches ne sont plus ponctuelles (festival d'août) mais récurrentes toute l'année.</p>
+
+        <p><strong>Concurrence des associations locales.</strong> Biscarrosse et les Grands Lacs comptent une trentaine d'associations culturelles et sportives qui puisent dans le même réservoir de bénévoles.</p>
+
+        <h3>Les causes structurelles</h3>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Facteur</th><th>Impact sur le bénévolat ODYSCA</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Saisonnalité touristique</td><td>Les résidents secondaires ne sont présents que l'été</td></tr>
+                    <tr><td>Coût du logement</td><td>Les jeunes actifs quittent le territoire</td></tr>
+                    <tr><td>Transformation des attentes</td><td>Les nouvelles générations privilégient l'engagement ponctuel</td></tr>
+                    <tr><td>Absence de dispositif de reconnaissance</td><td>Aucune formation certifiante proposée</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Le plan d'action proposé : trois leviers</h3>
+
+        <p><strong>A. Fidéliser les bénévoles historiques</strong></p>
+        <ul>
+            <li>Créer un statut de « bénévole référent » par pôle</li>
+            <li>Alléger leur charge physique : mutualiser la technique avec la Ville</li>
+            <li>Proposer des contreparties culturelles (invitations prioritaires, rencontres avec les artistes)</li>
+        </ul>
+
+        <p><strong>B. Attirer et former la relève</strong></p>
+        <ul>
+            <li>Partenariat avec le Service Civique : 2 volontaires par an</li>
+            <li>Partenariat avec les lycées et CFA du secteur</li>
+            <li>Formation certifiante : préparation au BPJEPS</li>
+        </ul>
+
+        <p><strong>C. Mutualiser et professionnaliser</strong></p>
+        <ul>
+            <li>Créer un pool de bénévoles inter-associations</li>
+            <li>Externaliser les tâches à faible valeur ajoutée</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p>« Le bénévolat, pilier historique d'ODYSCA, est aujourd'hui en tension. Il ne s'agit pas d'abandonner le bénévolat, mais de le réinventer : en allégeant la charge des bénévoles historiques, en créant des passerelles avec le Service Civique et la formation professionnelle. »</p>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 12 : LES ATELIERS CIRQUE AMATEURS
+         ============================================================ -->
+    <div class="page-break">
+
+        <h2>Les ateliers cirque amateurs : un potentiel sous-exploité à réactiver</h2>
+
+        <h3>Le constat</h3>
+
+        <p>Les ateliers cirque amateurs sont identifiés comme une fragilité dans le diagnostic : ils « peinent ». Pourtant, ils constituent un levier triple :</p>
+
+        <ul>
+            <li><strong>Économique :</strong> génération de recettes propres (adhésions, stages)</li>
+            <li><strong>Social :</strong> création de lien et de publics réguliers</li>
+            <li><strong>Artistique :</strong> vivier de futurs pratiquants, de bénévoles et de spectateurs éclairés</li>
+        </ul>
+
+        <h3>Les freins actuels</h3>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Frein</th><th>Origine</th><th>Conséquence</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Offre peu renouvelée</td><td>Absence de médiateur dédié</td><td>Lassitude des adhérents</td></tr>
+                    <tr><td>Horaires inadaptés</td><td>Calés sur les prestataires externes</td><td>Publics scolaires peu touchés</td></tr>
+                    <tr><td>Lieu peu identifiable</td><td>Dispersion avant 2025</td><td>Difficulté à créer une identité</td></tr>
+                    <tr><td>Absence de filière</td><td>Pas de parcours progressif</td><td>Les jeunes talents partent se former ailleurs</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>La stratégie de développement 2026-2029</h3>
+
+        <p><strong>Phase 1 : Installation et structuration (2026-2027)</strong></p>
+
+        <ul>
+            <li><strong>Découverte</strong> (6-10 ans) : ateliers ludiques, 1h30/hebdo</li>
+            <li><strong>Pratique</strong> (10-16 ans et adultes) : technique circassienne, 2h/hebdo</li>
+            <li><strong>Perfectionnement</strong> (16+ ans) : préparation à des créations collectives</li>
+        </ul>
+
+        <p><strong>Phase 2 : Montée en puissance (2028-2029)</strong></p>
+
+        <ul>
+            <li>Atelier « parentalité » (parents-enfants)</li>
+            <li>Création d'une troupe amateur</li>
+            <li>Partenariat avec les écoles de cirque de la région</li>
+        </ul>
+
+        <h3>Les indicateurs de suivi</h3>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Indicateur</th><th>2025 (est.)</th><th>2026</th><th>2027</th><th>2028</th><th>2029</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Adhérents ateliers cirque</td><td>~40</td><td>60</td><td>80</td><td>100</td><td>120</td></tr>
+                    <tr><td>Taux de renouvellement</td><td>~50%</td><td>55%</td><td>60%</td><td>65%</td><td>70%</td></tr>
+                    <tr><td>Recettes propres ateliers (€)</td><td>~8 000</td><td>12 000</td><td>15 000</td><td>18 000</td><td>22 000</td></tr>
+                    <tr><td>Stages vacances (sessions/an)</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                    <tr><td>Spectacle de fin d'année troupe amateur</td><td>Non</td><td>Non</td><td>Non</td><td>Oui</td><td>Oui</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="highlight-box">
+            <p>« Les ateliers cirque amateurs, aujourd'hui en difficulté, représentent un potentiel considérable encore sous-exploité. Le chapiteau offre l'opportunité de structurer une véritable école de pratique, avec des niveaux progressifs et une offre renouvelée. Leur développement est indissociable du recrutement du médiateur. »</p>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+         PAGES 13-14-15 : GOUVERNANCE (regroupées)
+         ============================================================ -->
+    <div class="page-break">
+
+        <h2>Gouvernance : une évolution nécessaire pour accompagner le développement</h2>
+
+        <p>L'étude d'opportunité menée par l'UBiC en 2022 a clairement identifié la gouvernance comme un des trois préalables à tout nouveau déploiement. Le DLA a confirmé cette nécessité : pour accompagner le recentrage du projet sur la pratique amateur et l'EAC, pour préparer le label SCIN 2028, et pour intégrer pleinement les partenaires publics dans le pilotage de la structure, une évolution de la gouvernance est indispensable.</p>
+
+        <h3>1. Un constat partagé : la gouvernance actuelle montre ses limites</h3>
+
+        <ul>
+            <li><strong>Une équipe restreinte :</strong> 1,75 ETP pour 2 salariés permanents</li>
+            <li><strong>Une implication des bénévoles qui diminue</strong></li>
+            <li><strong>Une représentation des partenaires publics insuffisante</strong></li>
+            <li><strong>Une prise de décision verticale</strong></li>
+        </ul>
+
+        <div class="quote">
+            L'association est désormais prête à partager le pouvoir et à s'engager dans une nouvelle gouvernance en adéquation avec cette volonté de Labellisation.
+            <span class="quote-author">— Présidente du CRABB, entretien UBIC 2022</span>
+        </div>
+
+        <h3>2. Les principes d'une gouvernance rénovée</h3>
+
+        <div class="principles-grid">
+            <div class="principle-item">
+                <h4>Démocratique</h4>
+                <p>Chaque partie prenante a voix au chapitre.</p>
+            </div>
+            <div class="principle-item">
+                <h4>Inclusive</h4>
+                <p>Les partenaires publics sont associés aux décisions.</p>
+            </div>
+            <div class="principle-item">
+                <h4>Opérationnelle</h4>
+                <p>Prise de décision rapide et efficace.</p>
+            </div>
+            <div class="principle-item">
+                <h4>Évolutive</h4>
+                <p>Adaptée aux besoins futurs (SCIN, évolution statutaire).</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 14 : LES PROPOSITIONS CONCRÈTES
+         ============================================================ -->
+    <div class="page-break">
+
+        <h3>3. Les propositions concrètes</h3>
+
+        <div class="highlight-box">
+            <p><strong>Scénario retenu : une association de préfiguration avec une gouvernance adaptée</strong></p>
+        </div>
+
+        <h4>3.1. Évolution des statuts (2026)</h4>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Collège</th><th>Membres</th><th>Rôle</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Collège des partenaires publics</strong></td><td>Ville, Département, Région, EPCI, DRAC</td><td>Veiller à la cohérence des politiques publiques</td></tr>
+                    <tr><td><strong>Collège des artistes et professionnels</strong></td><td>Artistes associés, compagnies</td><td>Garantir la qualité artistique</td></tr>
+                    <tr><td><strong>Collège des bénévoles et adhérents</strong></td><td>Bénévoles, adhérents</td><td>Assurer l'engagement citoyen</td></tr>
+                    <tr><td><strong>Collège des salariés</strong></td><td>Représentants de l'équipe</td><td>Faire entendre la voix des salariés</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>3.2. Mise en place d'un "Conseil de maison" (2026-2027)</h4>
+
+        <p>Un "Conseil de maison" réunira, deux fois par an, l'ensemble des partenaires publics et associatifs pour échanger sur les orientations stratégiques.</p>
+
+        <h4>3.3. Perspectives d'évolution statutaire (2027-2029)</h4>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Scénario</th><th>Conditions</th><th>Avantages</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>SCIC</strong></td><td>Si les ressources privées se développent</td><td>Logique coopérative</td></tr>
+                    <tr><td><strong>EPCC</strong></td><td>Si la coopération publique se renforce</td><td>Mission de service public affirmée</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 15 : LES RESSOURCES HUMAINES
+         ============================================================ -->
+    <div class="page-break">
+
+        <h3>4. Les ressources humaines : consolider l'équipe</h3>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Poste</th><th>2025</th><th>2026</th><th>2027</th><th>2028</th><th>2029</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Direction</td><td>1 ETP</td><td>1 ETP</td><td>1 ETP</td><td>1 ETP</td><td>1 ETP</td></tr>
+                    <tr><td>Secrétariat / comptabilité</td><td>0,69 ETP</td><td>0,69 ETP</td><td>0,69 ETP</td><td>0,69 ETP</td><td>0,69 ETP</td></tr>
+                    <tr><td>Animateur / médiateur cirque</td><td>–</td><td>–</td><td>–</td><td>1 ETP</td><td>1 ETP</td></tr>
+                    <tr><td><strong>Masse salariale</strong></td><td><strong>81 K€</strong></td><td><strong>82 K€</strong></td><td><strong>82 K€</strong></td><td><strong>92 K€</strong></td><td><strong>93,2 K€</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>5. Une convention pluriannuelle d'objectifs et de moyens</h3>
+
+        <p>Pour sécuriser le projet, une convention pluriannuelle d'objectifs et de moyens sera signée avec l'ensemble des partenaires publics (Ville, Département, Région, EPCI, DRAC).</p>
+
+        <div class="quote-small">
+            "La gouvernance d'ODYSCA doit évoluer pour être à la hauteur des enjeux : le recentrage du projet, le label SCIN 2028 et la coopération renforcée avec nos partenaires publics."
+        </div>
+
+        <div class="quote-small">
+            "Nous ne renonçons pas au bénévolat, nous l'intégrons dans une gouvernance plus large, où chaque partie prenante a sa place."
+        </div>
+
+        <div class="quote-small">
+            "À terme, l'évolution vers une SCIC ou un EPCC pourra être envisagée."
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 16 : BILAN ET CONCLUSION
+         ============================================================ -->
+    <div class="page-break">
+
+        <h2>Bilan et conclusion</h2>
+
+        <div class="highlight-box">
+            <p>ODYSCA est une <strong>ressource territoriale</strong> au sens de l'économie de la proximité. Elle contribue à la construction socioculturelle du territoire, participe à son sens et à son attractivité.</p>
+        </div>
+
+        <div class="schema-trajectory">
+            <div class="phase active">
+                <div class="year">2026</div>
+                <div class="title">Phase 1<br/>Installation</div>
+                <div class="desc">Chapiteau structuré<br/>Pratiques amateurs</div>
+            </div>
+            <div class="phase">
+                <div class="year">2027</div>
+                <div class="title">Phase 2<br/>Montée en charge</div>
+                <div class="desc">Médiateur recruté<br/>Formation lancée</div>
+            </div>
+            <div class="phase">
+                <div class="year">2028</div>
+                <div class="title">Phase 3<br/>Déploiement</div>
+                <div class="desc">15 spectacles<br/>EAC 40 jours</div>
+            </div>
+            <div class="phase">
+                <div class="year">2029</div>
+                <div class="title">Phase 4<br/>Label SCIN</div>
+                <div class="desc">Reconnaissance<br/>nationale</div>
+            </div>
+        </div>
+
+        <h3>Synthèse des objectifs 2026-2029</h3>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Axe</th><th>2026</th><th>2027</th><th>2028</th><th>2029</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Création</strong></td><td>Maintien résidences</td><td>Optimisation EAC</td><td>Volume maîtrisé</td><td>Volume maîtrisé</td></tr>
+                    <tr><td><strong>Diffusion</strong></td><td>6-8 spectacles salle</td><td>+ chapiteau (3)</td><td>+ espaces publics</td><td>Maintien</td></tr>
+                    <tr><td><strong>EAC</strong></td><td>9 jours d'actions</td><td>20 jours</td><td>30 jours</td><td>40 jours</td></tr>
+                    <tr><td><strong>Gouvernance</strong></td><td>Évolution statuts</td><td>Conseil de maison</td><td>Préfiguration SCIN</td><td>SCIN</td></tr>
+                    <tr><td><strong>RH</strong></td><td>86,6 K€</td><td>92 K€</td><td>92,2 K€</td><td>93,2 K€</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Les conditions de réussite</h3>
+
+        <div class="highlight-box">
+            <ol style="margin:0; padding-left:20px; font-size:20px;">
+                <li><strong>L'obtention du label SCIN en 2028</strong> – accélérateur de reconnaissance et de moyens</li>
+                <li><strong>La pérennisation des financements partenariaux</strong> – convention pluriannuelle d'objectifs et de moyens</li>
+                <li><strong>Le recrutement du/de la médiateur.trice</strong> – condition sine qua non du développement EAC</li>
+                <li><strong>La montée en compétence sur les nouveaux axes</strong> – formation, gouvernance, international</li>
+                <li><strong>La mobilisation et le renouvellement des bénévoles</strong> – préparer la relève</li>
+            </ol>
+        </div>
+
+        <h3>Notre ambition pour 2029</h3>
+
+        <div class="highlight-box" style="font-size:20px; text-align:center; background-color:#FFF5EF; border-color:#E85D20;">
+            <p style="font-size:22px;"><em>"Faire de Biscarrosse et du nord des Landes un pôle de référence pour le cirque de création en Nouvelle-Aquitaine, au service de tous les publics."</em></p>
+            <p style="font-size:18px; color:#666666; margin-top:15px;">C'est l'aboutissement naturel de 40 ans d'engagement culturel d'ODYSCA. Ce n'est pas une fin, mais un nouveau départ.</p>
+        </div>
+
+    </div>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <div class="footer">
+        <strong>ODYSCA</strong> – Association loi 1901<br/>
+        1500 Avenue Pierre Georges Latécoère - 40600 BISCARROSSE<br/>
+        05.58.78.82.82 – contact@odysca.fr – www.odysca.fr<br/>
+        Document final – Juillet 2026
+        <div class="festival-font" style="margin-top:8px;">✦ ODYSCA - 40 ans d'engagement culturel ✦</div>
+    </div>
+
+</div>
+
+</body>
+</html>
