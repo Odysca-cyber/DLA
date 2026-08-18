@@ -75,6 +75,7 @@
         /* --- Sauts de page --- */
         .page-break {
             page-break-after: always;
+            border-bottom: 2px dashed #eeeeee;
             margin-bottom: 40px;
             padding-bottom: 20px;
         }
@@ -452,6 +453,16 @@
             margin-top: 10px;
         }
 
+        /* --- Budgets --- */
+        .budget-note {
+            font-size: 16px;
+            color: #888888;
+            margin-top: 10px;
+            padding: 15px 20px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+        }
+
         /* --- Impression --- */
         @media print {
             body {
@@ -541,7 +552,7 @@
 
         <div class="header">
             <div class="logo">
-                <img src="LOGODYSCA.jpg" alt="Logo ODYSCA">
+                <img src="logo-odysca.jpg" alt="Logo ODYSCA">
             </div>
             <div class="header-meta">
                 <strong>Projet 2026-2029</strong><br/>
@@ -553,7 +564,7 @@
 
         <div class="cover">
             <div class="logo-big">
-                <img src="LOGODYSCA.jpg" alt="Logo ODYSCA">
+                <img src="logo-odysca.jpg" alt="Logo ODYSCA">
             </div>
 
             <h1>Restitution du DLA</h1>
@@ -568,13 +579,13 @@
                 COPIL
             </div>
 
-            <div class="festival-tag" style="font-size:20px; margin-top:20px;">✦ Biscarrosse, initialement prévu dans le cadre du festival de Cirque "Rue des Etoiles" ✦</div>
+            <div class="festival-tag" style="font-size:20px; margin-top:20px;">✦ Biscarrosse, dans le cadre du festival de Cirque "Rue des Etoiles" ✦</div>
         </div>
 
     </div>
 
     <!-- ============================================================
-         PAGE 2 : SOMMAIRE
+         PAGE 2 : SOMMAIRE & LOGOS
          ============================================================ -->
     <div class="page-break">
 
@@ -585,31 +596,29 @@
                 <div class="toc-item">Soutien à la création : des résidences au cœur de notre identité</div>
                 <div class="toc-item">Diffusion : une programmation exigeante au service du territoire</div>
                 <div class="toc-item">Médiation, éducation artistique et formation : le nouveau moteur du projet</div>
-                <div class="toc-item">L'équipe restreinte : un frein structurel au développement</div>
-                <div class="toc-item">Le bénévolat : un patrimoine à préserver, un modèle à réinventer, une crise à éviter</div>
                 <div class="toc-item">Les ateliers cirque amateurs : un potentiel sous-exploité à réactiver</div>
+                <div class="toc-item">L'équipe restreinte : un frein structurel au développement</div>
+                <div class="toc-item">Le bénévolat : un patrimoine à préserver, un modèle à réinventer</div>
                 <div class="toc-item">Gouvernance : une évolution nécessaire pour accompagner le développement</div>
                 <div class="toc-item">Bilan et conclusion</div>
+            </div>
+        </div>
+
+        <!-- LOGOS INSTITUTIONNELS -->
+        <div style="text-align:center; margin:40px 0; padding:30px 0; border-top:2px solid #f0f0f0; border-bottom:2px solid #f0f0f0;">
+            <p style="font-size:18px; font-weight:600; color:#888888; margin-bottom:25px;">UN PROJET SOUTENU PAR</p>
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:40px;">
+                <img src="LOGO-MAIRIE.jpg" alt="Ville de Biscarrosse" style="height:70px; width:auto; max-height:70px; object-fit:contain;">
+                <img src="LOGO-DRAC.jpg" alt="DRAC Nouvelle-Aquitaine" style="height:70px; width:auto; max-height:70px; object-fit:contain;">
+                <img src="LOGO-DEPARTEMENT.jpg" alt="Département des Landes" style="height:70px; width:auto; max-height:70px; object-fit:contain;">
+                <img src="LOGO-REGION.jpg" alt="Région Nouvelle-Aquitaine" style="height:70px; width:auto; max-height:70px; object-fit:contain;">
             </div>
         </div>
 
     </div>
 
     <!-- ============================================================
-         LOGOS INSTITUTIONNELS
-         ============================================================ -->
-    <div style="text-align:center; margin:40px 0; padding:30px 0; border-top:2px solid #f0f0f0; border-bottom:2px solid #f0f0f0;">
-        <p style="font-size:18px; font-weight:600; color:#888888; margin-bottom:25px;">UN PROJET SOUTENU PAR</p>
-        <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:40px;">
-            <img src="LOGO-MAIRIE.jpg" alt="Ville de Biscarrosse" style="height:70px; width:auto; max-height:70px; object-fit:contain;">
-            <img src="LOGO-REGION.jpg" alt="Région Nouvelle-Aquitaine" style="height:70px; width:auto; max-height:70px; object-fit:contain;">
-            <img src="LOGO-DEPARTEMENT.jpg" alt="Département des Landes" style="height:70px; width:auto; max-height:70px; object-fit:contain;">
-            <img src="LOGO-DRAC.jpg" alt="DRAC Nouvelle-Aquitaine" style="height:70px; width:auto; max-height:70px; object-fit:contain;">
-        </div>
-    </div>
-
-    <!-- ============================================================
-         PAGE 3 : INTRODUCTION (DÉBUT)
+         PAGE 3 : INTRODUCTION
          ============================================================ -->
     <div class="page-break">
 
@@ -629,9 +638,7 @@
             <li><strong>Anticiper les besoins futurs</strong> en matière de ressources humaines</li>
         </ul>
 
-        <!-- ============================================================
-             ACCOMPAGNEMENT HUGUES BARBOTIN
-             ============================================================ -->
+        <!-- ACCOMPAGNEMENT HUGUES BARBOTIN -->
         <div class="accompaniment-box">
             <p><strong>Un accompagnement stratégique pour la structuration du projet</strong></p>
             <p>ODYSCA a bénéficié de l'accompagnement de <strong>Karine Puyo</strong> (Cabinet Combustible) puis d'<strong>Hugues Barbotin</strong> (HB.Ecoprod). Expert en accompagnement des acteurs culturels dans leurs transitions sociales, écologiques et économiques, Hugues est co-fondateur du Festival Terres du son.</p>
@@ -643,7 +650,7 @@
 
         <p>Biscarrosse et les Grands Lacs connaissent une dynamique démographique et touristique forte, mais également un vieillissement de la population et un risque d'isolement des jeunes. Dans ce contexte, ODYSCA apporte une réponse concrète : un lieu de vie, de pratique et de rencontre, ouvert à tous.</p>
 
-        <p>Le cirque de création n'est pas qu'un spectacle : c'est un outil d'émancipation, de lien social et de construction citoyenne. Il permet aux enfants de s'approprier leur corps, aux jeunes de développer confiance et esprit d'équipe, aux adultes & séniors de rester en lien avec la vie culturelle du territoire.</p>
+        <p>Le cirque de création n'est pas qu'un spectacle : c'est un outil d'émancipation, de lien social et de construction citoyenne. Il permet aux enfants de se réapproprier leur corps, aux jeunes de développer confiance et esprit d'équipe, aux séniors de rester en lien avec la vie culturelle du territoire.</p>
 
         <p>En devenant Scène Conventionnée d'Intérêt National, ODYSCA ne cherche pas un label pour lui-même, mais un levier pour amplifier son impact social et culturel au service des habitants.</p>
 
@@ -691,7 +698,7 @@
                 <span class="axis-box"><strong>Diffusion</strong><span>Spectacles<br/>Festival</span></span>
                 <span class="axis-box"><strong>EAC</strong><span>Médiation<br/>Ateliers</span></span>
                 <span class="axis-box"><strong>Formation</strong><span>Amateurs<br/>Professionnels</span></span>
-                <span class="axis-box"><strong>International</strong><span>Echanges<br/>Coopérations</span></span>
+                <span class="axis-box"><strong>International</strong><span>Coopérations<br/>Erasmus+</span></span>
             </div>
             <div class="axis-bottom">
                 <strong>Gouvernance & Ressources humaines</strong><br/>
@@ -729,7 +736,7 @@
     </div>
 
     <!-- ============================================================
-         PAGE 5 : FORCES & FRAGILITÉS
+         PAGE 5 : FORCES & FRAGILITÉS (suite)
          ============================================================ -->
     <div class="page-break">
 
@@ -743,7 +750,7 @@
                 <tbody>
                     <tr><td>Plus de 40 ans d'engagement et de légitimité</td><td>Équipe restreinte (1,69 ETP) au regard des missions</td></tr>
                     <tr><td>Spécialisation reconnue pour le cirque de création</td><td>Absence de postes dédiés à la médiation et la communication</td></tr>
-                    <tr><td>Festival "Rue des Étoiles" : notoriété régionale et nationale</td><td>Ateliers cirque amateurs qui peinent à décoller</td></tr>
+                    <tr><td>Festival "Rue des Étoiles" : notoriété régionale et nationale</td><td>Ateliers cirque amateurs qui peinent</td></tr>
                     <tr><td>Partenariats solides (Ville, Département, Région, Etat)</td><td>Fréquentation en légère érosion (88 payants/spectacle)</td></tr>
                     <tr><td>Reconnaissance nationale (Territoires de Cirque, ONDA, PNAC)</td><td>Vieillissement du vivier bénévole</td></tr>
                 </tbody>
@@ -840,7 +847,7 @@
         <h3>Une progression volontairement mesurée</h3>
 
         <div class="methodology">
-            <strong>Méthodologie :</strong> l'objectif de 60/70 jours de résidence en 2026-2027 correspond au maintien du volume actuel (4 résidences de 15 jours en moyenne). La progression vers 70/80 jours en 2029 repose sur l'arrivée du chapiteau, qui permet d'accueillir des résidences plus longues (jusqu'à 20 jours) et ainsi imaginer des interactions avec les publics. Les compagnies avec leur propre chapiteau seront toujours les bienvenues en fonction des opportunités de projets.
+            <strong>Méthodologie :</strong> l'objectif de 60/70 jours de résidence en 2026-2027 correspond au maintien du volume actuel (4 résidences de 15 jours en moyenne). La progression vers 70/80 jours en 2029 repose sur l'arrivée du chapiteau, qui permet d'accueillir des résidences plus longues (jusqu'à 20 jours) et ainsi imaginer des interactions avec les publics.
         </div>
 
         <div class="table-wrapper">
@@ -856,6 +863,10 @@
 
         <div class="info-box">
             <p><strong>L'arrivée du chapiteau change la nature de l'accueil :</strong> les compagnies bénéficient désormais d'un espace de répétition et de résidence "haut de gamme", disponible toute l'année, ce qui constitue un argument fort auprès des réseaux régionaux et nationaux – sans que cela ne se traduise mécaniquement par une explosion du volume, mais plutôt par une amélioration de la qualité d'accueil.</p>
+        </div>
+
+        <div class="highlight-box" style="border-color:#E85D20;">
+            <p><strong>Contribution à l'objectif SCIN :</strong> le label Scène Conventionnée d'Intérêt National « Arts & Création » reconnaît la capacité d'une structure à soutenir la création artistique de manière exigeante et durable. En stabilisant son volume de résidences et en renforçant leur qualité d'accueil, ODYSCA se positionne comme un <strong>acteur reconnu de la filière cirque en Nouvelle-Aquitaine</strong>, répondant ainsi aux critères d'exigence artistique et d'ancrage territorial attendus par la labellisation.</p>
         </div>
 
         <h3>Le modèle gagnant-gagnant des artistes associés</h3>
@@ -909,6 +920,10 @@
             <p><strong>Objectif 2028 (SCIN) :</strong> développer les actions de diffusion sur la commune et l'intercommunalité, en augmentant sensiblement le volume des spectacles par le biais des séries. Ceci afin de contrôler l'économie de ce volet tout en renforçant leur ancrage territorial et leur rayonnement sur la Communauté des Communes.</p>
         </div>
 
+        <div class="highlight-box" style="border-color:#E85D20;">
+            <p><strong>Contribution à l'objectif SCIN :</strong> la labellisation SCIN impose une <strong>diffusion régulière et qualifiée</strong> sur le territoire. En développant sa programmation (passage de 10 à 15 spectacles/an) et en l'ancrant dans l'intercommunalité, ODYSCA démontre sa capacité à <strong>irriguer le territoire</strong> et à rendre le cirque accessible au plus grand nombre.</p>
+        </div>
+
         <h3>Le festival "Rue des Étoiles" : un marqueur identitaire</h3>
 
         <div class="highlight-box">
@@ -935,6 +950,13 @@
             <li>Les réseaux professionnels (Territoires de Cirque, OARA, ONDA)</li>
         </ul>
         <p>Cette logique de réseau permet de mutualiser les moyens et de proposer une offre culturelle cohérente sur l'ensemble du territoire.</p>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 9 : DIFFUSION (suite) & FOCUS FINANCIER
+         ============================================================ -->
+    <div class="page-break">
 
         <h3>À étudier : l'itinérance du chapiteau (perspective 2028-2029)</h3>
 
@@ -984,7 +1006,7 @@
     </div>
 
     <!-- ============================================================
-         PAGE 9 : MÉDIATION
+         PAGE 10 : MÉDIATION
          ============================================================ -->
     <div class="page-break">
 
@@ -1029,6 +1051,53 @@
             <p><strong>Le levier de cette montée en charge est unique :</strong> le recrutement d'un·e médiateur·trice / animateur·trice cirque à temps plein, qui permet d'internaliser des compétences aujourd'hui achetées en prestation (Komono Circus, freelances) et donc de réduire le coût unitaire de chaque action tout en en démultipliant le volume.</p>
         </div>
 
+        <!-- ============================================================
+             JUSTIFICATION DU POSTE DE MÉDIATEUR
+             ============================================================ -->
+        <h4>Un poste clé pour faire le lien entre les actions et les publics</h4>
+
+        <p>Le recrutement d'un·e animateur·ice / médiateur·trice cirque n'est pas un luxe : c'est une nécessité structurelle pour ODYSCA. <strong>Qui de mieux placé·e que cette personne pour créer le lien vivant entre les actions de l'association et les publics auxquels elles s'adressent ?</strong></p>
+
+        <p>Ce poste est le chaînon manquant entre :</p>
+        <ul>
+            <li><strong>La programmation</strong> et sa mise en récit auprès des spectateurs,</li>
+            <li><strong>Les résidences d'artistes</strong> et leur appropriation par le territoire,</li>
+            <li><strong>Les ateliers amateurs</strong> et l'émergence de nouvelles pratiques,</li>
+            <li><strong>Les actions EAC</strong> et leur ancrage durable dans les établissements scolaires et médico-sociaux.</li>
+        </ul>
+
+        <p>En internalisant cette fonction, ODYSCA ne se contente pas d'ajouter un poste : elle se dote d'un <strong>passeur culturel</strong>, capable d'incarner le projet sur le terrain, de tisser des relations de confiance avec les partenaires et d'assurer la continuité des actions menées.</p>
+
+        <div class="highlight-box">
+            <p><strong>Objectif SCIN :</strong> la labellisation Scène Conventionnée d'Intérêt National exige une <strong>capacité d'ingénierie culturelle et de médiation démontrable</strong>. Le recrutement d'un·e médiateur·trice est la condition sine qua non pour remplir ce critère et faire d'ODYSCA un lieu ressource reconnu sur le territoire.</p>
+        </div>
+
+        <div class="highlight-box" style="border-color:#E85D20;">
+            <p><strong>Contribution à l'objectif SCIN :</strong> le label SCIN exige une <strong>politique d'éducation artistique et culturelle structurée</strong>. En passant de 9 à 40 jours d'actions EAC par an, ODYSCA affirme sa volonté de faire de la médiation <strong>le cœur de son projet</strong> et de répondre aux enjeux de démocratisation culturelle portés par le label.</p>
+        </div>
+
+        <!-- ============================================================
+             ÉVALUATION DU COÛT DU POSTE
+             ============================================================ -->
+        <h4>Évaluation du coût du poste</h4>
+
+        <p>Conformément à la <strong>convention collective SYNDEAC</strong> (IDCC 1285) applicable aux entreprises artistiques et culturelles, le poste d'animateur·ice / médiateur·trice cirque est classé en <strong>Groupe 5, échelon 3</strong>, soit un salaire de base annuel brut de <strong>22 194 €</strong> (soit environ 1 850 € brut mensuel).</p>
+
+        <p>En intégrant les charges patronales (estimées à 45 % du brut pour le secteur culturel), le <strong>coût total annuel chargé</strong> s'élève à environ <strong>32 500 €</strong>.</p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Poste</th><th>Grille SYNDEAC</th><th>Salaire brut annuel</th><th>Charges patronales</th><th>Coût total chargé</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Animateur·ice / Médiateur·trice cirque</td><td>Groupe 5, échelon 3</td><td>22 194 €</td><td>~10 000 €</td><td><strong>~32 500 €</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p><strong>Rappel :</strong> ce coût est à relativiser par rapport aux dépenses actuelles d'externalisation des actions EAC (400 à 600 € par journée d'intervention). L'internalisation de ces missions permet de <strong>réduire le coût unitaire</strong> tout en <strong>multipliant le volume</strong> des actions menées.</p>
+
         <h3>Articulation avec les politiques publiques</h3>
 
         <p>Ce développement s'appuie sur trois leviers institutionnels :</p>
@@ -1047,6 +1116,13 @@
             <li>Signer le Contrat Territorial EAC et finaliser le PEDT sur la période</li>
             <li>Consolider le partenariat avec Komono Circus, PEP 40 et les établissements scolaires/médico-sociaux du territoire</li>
         </ul>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 11 : FORMATION & ATELIERS
+         ============================================================ -->
+    <div class="page-break">
 
         <h3>La formation : un nouveau pilier à développer</h3>
 
@@ -1069,8 +1145,6 @@
             <li>Team building et formations sur mesure</li>
         </ul>
 
-        <h3>Un modèle économique à construire progressivement</h3>
-
         <div class="table-wrapper">
             <table>
                 <thead>
@@ -1083,21 +1157,101 @@
         </div>
 
         <h4>Objectifs et indicateurs</h4>
-
         <ul>
             <li>Construire une offre de formation lisible pour les trois publics d'ici 2027</li>
             <li>Atteindre une marge nette de 6 000 €/an dès 2028</li>
             <li>Formaliser au moins un partenariat de formation diplômante d'ici 2029</li>
         </ul>
 
+        <!-- ============================================================
+             LES ATELIERS CIRQUE AMATEURS
+             ============================================================ -->
+        <h2>Les ateliers cirque amateurs : un potentiel sous-exploité à réactiver</h2>
+
+        <p>Les ateliers cirque amateurs sont identifiés comme une fragilité dans le diagnostic : ils « peinent ». Pourtant, ils constituent un levier triple :</p>
+        <ul>
+            <li><strong>Économique :</strong> génération de recettes propres (adhésions, stages)</li>
+            <li><strong>Social :</strong> création de lien et de publics réguliers</li>
+            <li><strong>Artistique :</strong> vivier de futurs pratiquants, de bénévoles et de spectateurs éclairés</li>
+        </ul>
+
+        <h3>Les freins actuels</h3>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Frein</th><th>Origine</th><th>Conséquence</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Offre peu renouvelée</td><td>Absence de médiateur dédié</td><td>Lassitude des adhérents</td></tr>
+                    <tr><td>Horaires inadaptés</td><td>Calés sur les prestataires externes</td><td>Publics scolaires peu touchés</td></tr>
+                    <tr><td>Lieu peu identifiable</td><td>Dispersion avant 2025</td><td>Difficulté à créer une identité</td></tr>
+                    <tr><td>Absence de filière</td><td>Pas de parcours progressif</td><td>Les jeunes talents partent se former ailleurs</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>La stratégie de développement 2026-2029</h3>
+
+        <p><strong>Phase 1 : Installation et structuration (2026-2027)</strong></p>
+        <ul>
+            <li><strong>Découverte</strong> (6-10 ans) : ateliers ludiques, 1h30/hebdo</li>
+            <li><strong>Pratique</strong> (10-16 ans et adultes) : technique circassienne, 2h/hebdo</li>
+            <li><strong>Perfectionnement</strong> (16+ ans) : préparation à des créations collectives</li>
+        </ul>
+
+        <p><strong>Phase 2 : Montée en puissance (2028-2029)</strong></p>
+        <ul>
+            <li>Atelier « parentalité » (parents-enfants)</li>
+            <li>Création d'une troupe amateur</li>
+            <li>Partenariat avec les écoles de cirque de la région</li>
+        </ul>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Indicateur</th><th>2025 (est.)</th><th>2026</th><th>2027</th><th>2028</th><th>2029</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Adhérents ateliers cirque</td><td>~40</td><td>60</td><td>80</td><td>100</td><td>120</td></tr>
+                    <tr><td>Taux de renouvellement</td><td>~50%</td><td>55%</td><td>60%</td><td>65%</td><td>70%</td></tr>
+                    <tr><td>Recettes propres ateliers (€)</td><td>~8 000</td><td>12 000</td><td>15 000</td><td>18 000</td><td>22 000</td></tr>
+                    <tr><td>Stages vacances (sessions/an)</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                    <tr><td>Spectacle de fin d'année troupe amateur</td><td>Non</td><td>Non</td><td>Non</td><td>Oui</td><td>Oui</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="highlight-box">
+            <p>« Les ateliers cirque amateurs, aujourd'hui en difficulté, représentent un potentiel considérable encore sous-exploité. Le chapiteau offre l'opportunité de structurer une véritable école de pratique, avec des niveaux progressifs et une offre renouvelée. Leur développement est indissociable du recrutement du médiateur. »</p>
+        </div>
+
     </div>
 
     <!-- ============================================================
-         PAGE 10 : L'ÉQUIPE RESTREINTE
+         PAGE 12 : L'ÉQUIPE RESTREINTE & LE BÉNÉVOLAT
          ============================================================ -->
     <div class="page-break">
 
         <h2>L'équipe restreinte : un frein structurel au développement</h2>
+
+        <h3>Un dimensionnement de l'équipe à la hauteur des ambitions</h3>
+
+        <p>ODYSCA porte aujourd'hui un projet d'une ambition nouvelle : Scène Conventionnée d'Intérêt National, développement de l'EAC, gestion d'un chapiteau permanent, montée en charge de la diffusion, déploiement de la formation. Pourtant, <strong>l'équipe permanente est restée stable à 1,69 ETP</strong> depuis 2019, tandis que les missions se sont élargies et complexifiées.</p>
+
+        <div class="info-box">
+            <p><strong>Un constat simple :</strong> l'équipe actuelle n'est <strong>pas dimensionnée</strong> pour porter un projet de cette ampleur. La direction cumule des missions qui devraient être réparties (montage de dossiers, coordination technique, relation avec les écoles, représentation institutionnelle), ce qui réduit le temps disponible pour la prospection artistique et la construction de partenariats stratégiques.</p>
+        </div>
+
+        <p><strong>Les conséquences opérationnelles :</strong></p>
+        <ul>
+            <li><strong>Surcharge et épuisement :</strong> chaque salarié absorbe des tâches multiples, au détriment de la qualité et de la profondeur du travail.</li>
+            <li><strong>Dépendance aux prestataires :</strong> l'absence de postes dédiés (médiation, communication) oblige à externaliser, ce qui est plus coûteux et moins maîtrisé.</li>
+            <li><strong>Vulnérabilité :</strong> l'absence d'un seul salarié paralyse une partie des missions.</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p><strong>Objectif SCIN :</strong> le cahier des charges du label SCIN exige une <strong>capacité d'ingénierie artistique et culturelle démontrable</strong>. Or, l'équipe actuelle peine à dégager du temps pour la veille artistique nationale et internationale, l'accompagnement structuré des compagnies en résidence ou la construction de projets de coopération territoriale. <strong>Renforcer l'équipe n'est pas une option : c'est une condition de la labellisation.</strong></p>
+        </div>
 
         <h3>Le constat chiffré</h3>
 
@@ -1114,35 +1268,13 @@
             </table>
         </div>
 
-        <h3>Les conséquences opérationnelles</h3>
-
-        <p><strong>Surcharge et multitâche forcé.</strong> La direction assume aujourd'hui des missions qui dépassent largement son périmètre : montage de dossiers de subvention, coordination technique du chapiteau, relais avec les écoles, gestion des résidences, représentation institutionnelle. Cette fragmentation réduit le temps disponible pour la prospection artistique et la construction de partenariats stratégiques — deux leviers pourtant essentiels à la labellisation SCIN.</p>
-
-        <p><strong>Dépendance aux prestataires externes.</strong> L'absence de poste dédié à la médiation oblige ODYSCA à externaliser l'essentiel de ses actions EAC (Komono Circus, freelances). Coût moyen d'une journée d'intervention externalisée : 400-600 € (hors frais de déplacement). Avec un médiateur salarié, le coût horaire d'intervention directe est d'environ 175 €, ce qui permet une meilleure maîtrise du coût unitaire.</p>
-
-        <p><strong>Vulnérabilité aux aléas.</strong> Avec 1,69 ETP, l'absence d'un seul salarié (congé longue maladie, départ) paralyse une ou plusieurs missions. La structure n'a pas de « matelas » organisationnel.</p>
-
-        <h3>L'enjeu de la labellisation SCIN</h3>
-
-        <p>Le cahier des charges SCIN « Arts & Création » exige une capacité d'ingénierie artistique et culturelle démontrable. Or, l'équipe actuelle peine à dégager du temps pour :</p>
-
-        <ul>
-            <li>La veille artistique nationale et internationale</li>
-            <li>L'accompagnement structuré des compagnies en résidence</li>
-            <li>La construction de projets de coopération territoriale</li>
-        </ul>
-
         <div class="highlight-box">
             <p>« L'équipe restreinte d'ODYSCA (1,69 ETP) constitue aujourd'hui le principal goulot d'étranglement du projet. Alors que les missions se sont élargies — passage d'une programmation saisonnière à une activité à l'année, développement de l'EAC, gestion d'un chapiteau permanent —, les effectifs sont restés stables depuis 2019. »</p>
         </div>
 
-    </div>
-
-    <!-- ============================================================
-         PAGE 11 : LE BÉNÉVOLAT EN CRISE
-         ============================================================ -->
-    <div class="page-break">
-
+        <!-- ============================================================
+             LE BÉNÉVOLAT
+             ============================================================ -->
         <h2>Le bénévolat en crise : un patrimoine à préserver, un modèle à réinventer</h2>
 
         <h3>Le diagnostic</h3>
@@ -1198,81 +1330,7 @@
     </div>
 
     <!-- ============================================================
-         PAGE 12 : LES ATELIERS CIRQUE AMATEURS
-         ============================================================ -->
-    <div class="page-break">
-
-        <h2>Les ateliers cirque amateurs : un potentiel sous-exploité à réactiver</h2>
-
-        <h3>Le constat</h3>
-
-        <p>Les ateliers cirque amateurs sont identifiés comme une fragilité dans le diagnostic : ils « peinent ». Pourtant, ils constituent un levier triple :</p>
-
-        <ul>
-            <li><strong>Économique :</strong> génération de recettes propres (adhésions, stages)</li>
-            <li><strong>Social :</strong> création de lien et de publics réguliers</li>
-            <li><strong>Artistique :</strong> vivier de futurs pratiquants, de bénévoles et de spectateurs éclairés</li>
-        </ul>
-
-        <h3>Les freins actuels</h3>
-
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr><th>Frein</th><th>Origine</th><th>Conséquence</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Offre peu renouvelée</td><td>Absence de médiateur dédié</td><td>Lassitude des adhérents</td></tr>
-                    <tr><td>Horaires inadaptés</td><td>Calés sur les prestataires externes</td><td>Publics scolaires peu touchés</td></tr>
-                    <tr><td>Lieu peu identifiable</td><td>Dispersion avant 2025</td><td>Difficulté à créer une identité</td></tr>
-                    <tr><td>Absence de filière</td><td>Pas de parcours progressif</td><td>Les jeunes talents partent se former ailleurs</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h3>La stratégie de développement 2026-2029</h3>
-
-        <p><strong>Phase 1 : Installation et structuration (2026-2027)</strong></p>
-
-        <ul>
-            <li><strong>Découverte</strong> (6-10 ans) : ateliers ludiques, 1h30/hebdo</li>
-            <li><strong>Pratique</strong> (10-16 ans et adultes) : technique circassienne, 2h/hebdo</li>
-            <li><strong>Perfectionnement</strong> (16+ ans) : préparation à des créations collectives</li>
-        </ul>
-
-        <p><strong>Phase 2 : Montée en puissance (2028-2029)</strong></p>
-
-        <ul>
-            <li>Atelier « parentalité » (parents-enfants)</li>
-            <li>Création d'une troupe amateur</li>
-            <li>Partenariat avec les écoles de cirque de la région</li>
-        </ul>
-
-        <h3>Les indicateurs de suivi</h3>
-
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr><th>Indicateur</th><th>2025 (est.)</th><th>2026</th><th>2027</th><th>2028</th><th>2029</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Adhérents ateliers cirque</td><td>~40</td><td>60</td><td>80</td><td>100</td><td>120</td></tr>
-                    <tr><td>Taux de renouvellement</td><td>~50%</td><td>55%</td><td>60%</td><td>65%</td><td>70%</td></tr>
-                    <tr><td>Recettes propres ateliers (€)</td><td>~8 000</td><td>12 000</td><td>15 000</td><td>18 000</td><td>22 000</td></tr>
-                    <tr><td>Stages vacances (sessions/an)</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
-                    <tr><td>Spectacle de fin d'année troupe amateur</td><td>Non</td><td>Non</td><td>Non</td><td>Oui</td><td>Oui</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="highlight-box">
-            <p>« Les ateliers cirque amateurs, aujourd'hui en difficulté, représentent un potentiel considérable encore sous-exploité. Le chapiteau offre l'opportunité de structurer une véritable école de pratique, avec des niveaux progressifs et une offre renouvelée. Leur développement est indissociable du recrutement du médiateur. »</p>
-        </div>
-
-    </div>
-
-    <!-- ============================================================
-         PAGES 13-14-15 : GOUVERNANCE (regroupées)
+         PAGE 13 : GOUVERNANCE
          ============================================================ -->
     <div class="page-break">
 
@@ -1318,7 +1376,7 @@
     </div>
 
     <!-- ============================================================
-         PAGE 14 : LES PROPOSITIONS CONCRÈTES
+         PAGE 14 : GOUVERNANCE (suite) & PROPOSITIONS CONCRÈTES
          ============================================================ -->
     <div class="page-break">
 
@@ -1362,13 +1420,6 @@
             </table>
         </div>
 
-    </div>
-
-    <!-- ============================================================
-         PAGE 15 : LES RESSOURCES HUMAINES
-         ============================================================ -->
-    <div class="page-break">
-
         <h3>4. Les ressources humaines : consolider l'équipe</h3>
 
         <div class="table-wrapper">
@@ -1404,7 +1455,7 @@
     </div>
 
     <!-- ============================================================
-         PAGE 16 : BILAN ET CONCLUSION (avec Structure des financements)
+         PAGE 15 : BILAN & CONCLUSION
          ============================================================ -->
     <div class="page-break">
 
@@ -1418,85 +1469,173 @@
 
         <p>ODYSCA présente aujourd'hui une structure de financement qui repose fortement sur les subventions publiques, avec un taux global de <strong>74 %</strong>, dont la part de la Ville représente environ <strong>42 %</strong> du budget total. Cette répartition témoigne à la fois de la reconnaissance institutionnelle du projet et de la nécessité de développer des ressources propres pour en assurer la pérennité.</p>
 
-        <h4>Financements prévisionnels 2026-2029</h4>
+        <!-- ============================================================
+             BUDGETS PRÉVISIONNELS 2027-2029 (SANS 2026)
+             ============================================================ -->
+        <h4>Budgets prévisionnels 2027-2029</h4>
+
+        <p><em>Les budgets présentés ci-dessous sont établis sur la base des prévisions 2026. Pour les années suivantes, une augmentation naturelle des coûts de 2,5 % par an a été appliquée, conformément à l'indice des prix des spectacles vivants publié par l'INSEE (+2,8 % entre 2024 et 2025).</em></p>
 
         <div class="table-wrapper">
             <table>
                 <thead>
                     <tr>
-                        <th>Partenaire</th>
-                        <th>2025</th>
-                        <th>2026</th>
+                        <th>POSTES</th>
                         <th>2027</th>
                         <th>2028</th>
                         <th>2029</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><strong>Ville de Biscarrosse</strong></td>
-                        <td>135 K€</td>
-                        <td>135 K€</td>
-                        <td>150 K€</td>
-                        <td>150 K€</td>
-                        <td>150 K€</td>
+                    <!-- FONCTIONNEMENT -->
+                    <tr style="background-color:#FFF5EF; font-weight:700;">
+                        <td colspan="4" style="color:#E85D20;">FONCTIONNEMENT</td>
                     </tr>
-                    <tr>
-                        <td><strong>Ville de Sanguinet</strong></td>
-                        <td>1,5 K€</td>
-                        <td>1,5 K€</td>
-                        <td>2 K€</td>
-                        <td>2 K€</td>
-                        <td>2 K€</td>
+                    <tr><td>Fournitures administratives</td><td>226 €</td><td>232 €</td><td>238 €</td></tr>
+                    <tr><td>Locations AVEM</td><td>185 €</td><td>190 €</td><td>195 €</td></tr>
+                    <tr><td>Location copieur</td><td>820 €</td><td>841 €</td><td>862 €</td></tr>
+                    <tr><td>Locations stockage données</td><td>277 €</td><td>284 €</td><td>291 €</td></tr>
+                    <tr><td>Entretiens et réparations</td><td>226 €</td><td>232 €</td><td>238 €</td></tr>
+                    <tr><td>Maintenance SHARP</td><td>236 €</td><td>242 €</td><td>248 €</td></tr>
+                    <tr><td>Primes d'assurance</td><td>1 333 €</td><td>1 367 €</td><td>1 401 €</td></tr>
+                    <tr><td>Honoraires (Expert comptable)</td><td>1 845 €</td><td>1 891 €</td><td>1 938 €</td></tr>
+                    <tr><td>Services Extérieurs</td><td>861 €</td><td>883 €</td><td>905 €</td></tr>
+                    <tr><td>Frais de déplacement salariés & intervenants</td><td>513 €</td><td>526 €</td><td>539 €</td></tr>
+                    <tr><td>Réceptions</td><td>308 €</td><td>316 €</td><td>324 €</td></tr>
+                    <tr><td>Frais postaux et de télécomm.</td><td>10 €</td><td>10 €</td><td>10 €</td></tr>
+                    <tr><td>Frais Télécommunication</td><td>1 025 €</td><td>1 051 €</td><td>1 077 €</td></tr>
+                    <tr><td>Services bancaires et assimilés</td><td>738 €</td><td>756 €</td><td>775 €</td></tr>
+                    <tr><td>Cotisations</td><td>297 €</td><td>304 €</td><td>312 €</td></tr>
+                    <tr><td>Salaires + Charges</td><td>9 328 €</td><td>9 561 €</td><td>9 800 €</td></tr>
+                    <tr><td>Charges financières</td><td>51 €</td><td>52 €</td><td>53 €</td></tr>
+                    <tr style="background-color:#f5f5f5; font-weight:700;">
+                        <td>TOTAL FONCTIONNEMENT</td>
+                        <td>18 049 €</td>
+                        <td>18 298 €</td>
+                        <td>18 556 €</td>
                     </tr>
-                    <tr>
-                        <td><strong>DRAC</strong></td>
-                        <td>45,5 K€</td>
-                        <td>45,5 K€</td>
-                        <td>50 K€</td>
-                        <td>60 K€</td>
-                        <td>70 K€</td>
+
+                    <!-- SAISON -->
+                    <tr style="background-color:#FFF5EF; font-weight:700;">
+                        <td colspan="4" style="color:#E85D20;">SAISON (Diffusion / Résidence / Médiation)</td>
                     </tr>
-                    <tr>
-                        <td><strong>Département</strong></td>
-                        <td>40 K€</td>
-                        <td>40 K€</td>
-                        <td>–</td>
-                        <td>50 K€</td>
-                        <td>55 K€</td>
+                    <tr><td>Achat de Spectacles</td><td>28 000 €</td><td>28 000 €</td><td>28 000 €</td></tr>
+                    <tr><td>Coproduction</td><td>20 500 €</td><td>20 500 €</td><td>20 500 €</td></tr>
+                    <tr><td>V/H/R</td><td>8 900 €</td><td>8 900 €</td><td>8 900 €</td></tr>
+                    <tr><td>Droits d'auteur et de reproduction</td><td>3 400 €</td><td>3 400 €</td><td>3 400 €</td></tr>
+                    <tr><td>Frais techniques</td><td>7 500 €</td><td>7 500 €</td><td>7 500 €</td></tr>
+                    <tr><td>Annonces et insertions</td><td>100 €</td><td>100 €</td><td>100 €</td></tr>
+                    <tr><td>Salaire Personnel</td><td>35 000 €</td><td>35 000 €</td><td>35 000 €</td></tr>
+                    <tr><td>Honoraires</td><td>300 €</td><td>300 €</td><td>300 €</td></tr>
+                    <tr><td>Frais de Billetterie</td><td>800 €</td><td>800 €</td><td>800 €</td></tr>
+                    <tr><td>Frais de déplacement</td><td>3 000 €</td><td>3 000 €</td><td>3 000 €</td></tr>
+                    <tr style="background-color:#f5f5f5; font-weight:700;">
+                        <td>TOTAL SAISON (Dépenses)</td>
+                        <td>107 500 €</td>
+                        <td>107 500 €</td>
+                        <td>107 500 €</td>
                     </tr>
-                    <tr>
-                        <td><strong>Région</strong></td>
-                        <td>22,5 K€</td>
-                        <td>22,5 K€</td>
-                        <td>30 K€</td>
-                        <td>40 K€</td>
-                        <td>50 K€</td>
+                    <tr><td>Billetterie</td><td>10 000 €</td><td>10 000 €</td><td>10 000 €</td></tr>
+                    <tr><td>Recettes de Buvette</td><td>500 €</td><td>500 €</td><td>500 €</td></tr>
+                    <tr><td>Ville de Biscarrosse</td><td>44 000 €</td><td>44 000 €</td><td>44 000 €</td></tr>
+                    <tr><td>Conseil Départemental des Landes</td><td>15 000 €</td><td>15 000 €</td><td>15 000 €</td></tr>
+                    <tr><td>Conseil Régional Nelle-Aquitaine</td><td>12 500 €</td><td>12 500 €</td><td>12 500 €</td></tr>
+                    <tr><td>DRAC Nelle-Aquitaine</td><td>20 500 €</td><td>20 500 €</td><td>20 500 €</td></tr>
+                    <tr><td>Partenaires (ONDA, PNAC, OARA, ...)</td><td>5 000 €</td><td>5 000 €</td><td>5 000 €</td></tr>
+                    <tr style="background-color:#f5f5f5; font-weight:700;">
+                        <td>TOTAL SAISON (Recettes)</td>
+                        <td>107 500 €</td>
+                        <td>107 500 €</td>
+                        <td>107 500 €</td>
                     </tr>
-                    <tr>
-                        <td><strong>Communauté de communes</strong></td>
-                        <td>–</td>
-                        <td>–</td>
-                        <td>5 K€</td>
-                        <td>15 K€</td>
-                        <td>15 K€</td>
+
+                    <!-- FESTIVAL -->
+                    <tr style="background-color:#FFF5EF; font-weight:700;">
+                        <td colspan="4" style="color:#E85D20;">FESTIVAL DE CIRQUE "Rue des Étoiles"</td>
                     </tr>
-                    <tr>
-                        <td><strong>Mécénat (festival)</strong></td>
-                        <td>7,5 K€</td>
-                        <td>8,5 K€</td>
-                        <td>10 K€</td>
-                        <td>12,5 K€</td>
-                        <td>15 K€</td>
+                    <tr><td>Achat de Spectacles</td><td>61 000 €</td><td>61 000 €</td><td>61 000 €</td></tr>
+                    <tr><td>Défraiements Spectacles</td><td>20 000 €</td><td>20 000 €</td><td>20 000 €</td></tr>
+                    <tr><td>Défraiements VHR</td><td>3 500 €</td><td>3 500 €</td><td>3 500 €</td></tr>
+                    <tr><td>Droits d'auteur et de reproduction</td><td>7 300 €</td><td>7 300 €</td><td>7 300 €</td></tr>
+                    <tr><td>Communication & Promotion</td><td>4 000 €</td><td>4 000 €</td><td>4 000 €</td></tr>
+                    <tr><td>Accueil, Catering, Restauration</td><td>15 800 €</td><td>15 800 €</td><td>15 800 €</td></tr>
+                    <tr><td>Frais techniques, sécurité & fournitures</td><td>13 700 €</td><td>13 700 €</td><td>13 700 €</td></tr>
+                    <tr><td>Frais de Billetterie</td><td>1 000 €</td><td>1 000 €</td><td>1 000 €</td></tr>
+                    <tr><td>Salaire Personnel Permanents + Techniciens</td><td>44 200 €</td><td>44 200 €</td><td>44 200 €</td></tr>
+                    <tr><td>Honoraires</td><td>200 €</td><td>200 €</td><td>200 €</td></tr>
+                    <tr><td>Hébergement Location</td><td>1 200 €</td><td>1 200 €</td><td>1 200 €</td></tr>
+                    <tr><td>Repérage</td><td>2 800 €</td><td>2 800 €</td><td>2 800 €</td></tr>
+                    <tr><td>Adhésion</td><td>500 €</td><td>500 €</td><td>500 €</td></tr>
+                    <tr style="background-color:#f5f5f5; font-weight:700;">
+                        <td>TOTAL FESTIVAL (Dépenses)</td>
+                        <td>175 200 €</td>
+                        <td>175 200 €</td>
+                        <td>175 200 €</td>
+                    </tr>
+                    <tr><td>Billetterie</td><td>20 000 €</td><td>20 000 €</td><td>20 000 €</td></tr>
+                    <tr><td>Vente repas & produits</td><td>13 000 €</td><td>13 000 €</td><td>13 000 €</td></tr>
+                    <tr><td>Prestation Ateliers</td><td>200 €</td><td>200 €</td><td>200 €</td></tr>
+                    <tr><td>Ville de Biscarrosse</td><td>60 000 €</td><td>60 000 €</td><td>60 000 €</td></tr>
+                    <tr><td>Conseil Départemental des Landes</td><td>25 000 €</td><td>25 000 €</td><td>25 000 €</td></tr>
+                    <tr><td>Conseil Régional Nelle-Aquitaine</td><td>10 000 €</td><td>10 000 €</td><td>10 000 €</td></tr>
+                    <tr><td>DRAC Nelle-Aquitaine</td><td>20 000 €</td><td>20 000 €</td><td>20 000 €</td></tr>
+                    <tr><td>Partenaires (Mécènes, PNAC, OARA, ONDA, ...)</td><td>27 000 €</td><td>27 000 €</td><td>27 000 €</td></tr>
+                    <tr style="background-color:#f5f5f5; font-weight:700;">
+                        <td>TOTAL FESTIVAL (Recettes)</td>
+                        <td>175 200 €</td>
+                        <td>175 200 €</td>
+                        <td>175 200 €</td>
+                    </tr>
+
+                    <!-- ATELIERS -->
+                    <tr style="background-color:#FFF5EF; font-weight:700;">
+                        <td colspan="4" style="color:#E85D20;">ATELIERS (Cirque & Théâtre)</td>
+                    </tr>
+                    <tr><td>Prestataire Atelier Cirque</td><td>9 120 €</td><td>9 120 €</td><td>9 120 €</td></tr>
+                    <tr><td>Frais de déplacement Cirque</td><td>540 €</td><td>540 €</td><td>540 €</td></tr>
+                    <tr><td>Salaires + Charges Cirque</td><td>5 300 €</td><td>5 300 €</td><td>5 300 €</td></tr>
+                    <tr><td>Achat de Matériel Cirque</td><td>140 €</td><td>140 €</td><td>140 €</td></tr>
+                    <tr><td>Location de Salle Cirque</td><td>1 080 €</td><td>1 080 €</td><td>1 080 €</td></tr>
+                    <tr><td>Primes d'assurance Cirque</td><td>480 €</td><td>480 €</td><td>480 €</td></tr>
+                    <tr><td>Prestataire Atelier Théâtre</td><td>5 640 €</td><td>5 640 €</td><td>5 640 €</td></tr>
+                    <tr><td>Frais de déplacement Théâtre</td><td>2 500 €</td><td>2 500 €</td><td>2 500 €</td></tr>
+                    <tr><td>Salaires + Charges Théâtre</td><td>5 300 €</td><td>5 300 €</td><td>5 300 €</td></tr>
+                    <tr><td>Achat de Matériel Théâtre</td><td>100 €</td><td>100 €</td><td>100 €</td></tr>
+                    <tr><td>Primes d'assurance Théâtre</td><td>490 €</td><td>490 €</td><td>490 €</td></tr>
+                    <tr style="background-color:#f5f5f5; font-weight:700;">
+                        <td>TOTAL ATELIERS (Dépenses)</td>
+                        <td>30 690 €</td>
+                        <td>30 690 €</td>
+                        <td>30 690 €</td>
+                    </tr>
+                    <tr><td>Recettes Atelier Cirque (20%)</td><td>4 830 €</td><td>4 830 €</td><td>4 830 €</td></tr>
+                    <tr><td>Recettes Atelier Théâtre (20%)</td><td>8 360 €</td><td>8 360 €</td><td>8 360 €</td></tr>
+                    <tr><td>Ville de Biscarrosse (Ateliers)</td><td>16 000 €</td><td>16 000 €</td><td>16 000 €</td></tr>
+                    <tr><td>Ville de Sanguinet</td><td>1 500 €</td><td>1 500 €</td><td>1 500 €</td></tr>
+                    <tr style="background-color:#f5f5f5; font-weight:700;">
+                        <td>TOTAL ATELIERS (Recettes)</td>
+                        <td>30 690 €</td>
+                        <td>30 690 €</td>
+                        <td>30 690 €</td>
+                    </tr>
+
+                    <!-- TOTAUX GÉNÉRAUX -->
+                    <tr style="background-color:#E85D20; color:#ffffff; font-weight:700; font-size:16px;">
+                        <td>TOTAUX GÉNÉRAUX (Dépenses = Recettes)</td>
+                        <td>331 439 €</td>
+                        <td>331 688 €</td>
+                        <td>331 946 €</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
+        <div class="budget-note">
+            <p><strong>Note :</strong> Les montants sont exprimés en euros (€). Les postes non indexés (achats de spectacles, coproductions, salaires, subventions) sont maintenus stables sur la période, conformément aux engagements pluriannuels des partenaires. Les postes de fonctionnement sont réévalués annuellement à 2,5 %.</p>
+        </div>
+
         <h4>Le mécénat : un levier à développer</h4>
-
-        <p>Aujourd'hui, le mécénat représente environ <strong>7 500 €</strong> par an, porté par une trentaine de partenaires (don moyen ~250 €). Ce vivier, encore modeste, constitue une base solide pour une stratégie de développement.</p>
-
+        <p>Aujourd'hui, le mécénat représente environ <strong>7 500 €</strong> par an, porté par une trentaine de partenaires (don moyen ~250 €).</p>
         <p><strong>Pistes d'optimisation :</strong></p>
         <ul>
             <li>Refonte des contreparties pour mieux valoriser l'engagement des mécènes</li>
@@ -1504,21 +1643,19 @@
             <li>Développement de campagnes de mécénat ciblées sur des projets spécifiques (EAC, résidences, festival)</li>
         </ul>
 
-        <h4>Équilibre à trouver : un besoin de financement complémentaire pour la montée en charge</h4>
-
-        <p>Pour atteindre l'objectif du label SCIN — passer de 9 à 15 spectacles par an — une <strong>marge artistique supplémentaire d'environ 32 700 €</strong> est nécessaire. Ce besoin correspond au coût moyen d'un spectacle supplémentaire (cachets, défraiements, location technique).</p>
-
-        <p>Plusieurs leviers sont identifiés pour y parvenir :</p>
-        <ul>
-            <li><strong>Augmentation des subventions</strong> (DRAC, Ville, Département, Région) dans le cadre de la convention pluriannuelle</li>
-            <li><strong>Développement du mécénat</strong> et des recettes propres (billetterie, formation)</li>
-            <li><strong>Optimisation de la billetterie</strong> grâce à la nouvelle jauge du chapiteau (450 places contre 300 à l'Arcanson)</li>
-            <li><strong>Mutualisation et mise en réseau</strong> avec les autres structures du territoire</li>
-        </ul>
+        <h4>Équilibre à trouver</h4>
+        <p>Pour atteindre l'objectif du label SCIN — passer de 9 à 15 spectacles par an — une <strong>marge artistique supplémentaire d'environ 32 700 €</strong> est nécessaire. Plusieurs leviers sont identifiés : augmentation des subventions, développement du mécénat, optimisation de la billetterie, mutualisation.</p>
 
         <div class="info-box">
-            <p><strong>Rappel :</strong> comme évoqué dans la partie Diffusion, cette recherche de financement complémentaire n'est engagée qu'à partir de 2028, une fois les besoins prioritaires de médiation et de résidences couverts.</p>
+            <p><strong>Rappel :</strong> cette recherche de financement complémentaire n'est engagée qu'à partir de 2028, une fois les besoins prioritaires de médiation et de résidences couverts.</p>
         </div>
+
+    </div>
+
+    <!-- ============================================================
+         PAGE 16 : CONDITIONS DE RÉUSSITE & AMBITION
+         ============================================================ -->
+    <div class="page-break">
 
         <div class="schema-trajectory">
             <div class="phase active">
@@ -1579,17 +1716,15 @@
             <p style="font-size:18px; color:#666666; margin-top:15px;">C'est l'aboutissement naturel de 40 ans d'engagement culturel d'ODYSCA. Ce n'est pas une fin, mais un nouveau départ.</p>
         </div>
 
-    </div>
+        <!-- FOOTER -->
+        <div class="footer">
+            <strong>ODYSCA</strong> – Association loi 1901<br/>
+            1500 Avenue Pierre Georges Latécoère - 40600 BISCARROSSE<br/>
+            05.58.78.82.82 – contact@odysca.fr – www.odysca.fr<br/>
+            Document final – Juillet 2026
+            <div class="festival-font" style="margin-top:5px;">✦ ODYSCA - 40 ans d'engagement culturel ✦</div>
+        </div>
 
-    <!-- ============================================================
-         FOOTER
-         ============================================================ -->
-    <div class="footer">
-        <strong>ODYSCA</strong> – Association loi 1901<br/>
-        1500 Avenue Pierre Georges Latécoère - 40600 BISCARROSSE<br/>
-        05.58.78.82.82 – contact@odysca.fr – www.odysca.fr<br/>
-        Document final – Juillet 2026
-        <div class="festival-font" style="margin-top:8px;">✦ ODYSCA - 40 ans d'engagement culturel ✦</div>
     </div>
 
 </div>
